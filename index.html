@@ -1110,61 +1110,59 @@ let AI_MVP_DATA = {
   ],
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
-      {name:'여명재',team:'기금팀',date:'9/8',title:'사업장별로 흩어져 있던 상담 메일을 사람이 일일이 정리하던 방식 대신, …',body:'Gmail 스레드를 사업장DB와 자동 매칭해 제목·내용요약·대분류/소분류·참고파일명까지 구조화 입력 「검토함 → 승인 → 사업장 히스토리 이관」 3단계 파이프라인을 설계하고 65건 일괄 처리 Job A(신규 초안 수집)·Job B(이관) 2단계 SKILL.md를 작성해 매일 자동 실행되는 루틴으로 시스템화',tool:'Claude',score:9},
-      {name:'박진아',team:'경영지원팀',date:'9/8',title:'[사실] 8월 손익계산서 초안이 "사내복지기금 연 누적 60M → 5% …',body:'[사실] 분석 대상 세션 3건(능동 대화 1 + 스케줄 자동화 2, daily-briefing-pja·daily-ai-usage-log 제외). ① 능동 대화 「월 마감 손익계산서 작성」 — (a) 8월 통장 지출 raw 1,042건을 올려 불공제 여부·공제금액·구분1/2 검토 요청 → 정정 필요 5건 식별(8/5 카니발 과태료 부가세 2,909 삭제·세금…',tool:'Claude',score:9},
-      {name:'이성미',team:'노무관리팀',date:'9/8',title:'사용자가 "샬라샬라 부장님도 내용을 알고 계셔야..." 식의 구어체 메모…',body:'오늘 노무관리 실무 관련 Claude 대화 세션 1건("업무") 확인. ①건설현장(강천리) 근로자 중 국민연금 통합관리번호로 신고되는 보라색 표시 인원(황규석·손일남·조덕욱)의 현장별 근무일수를 확인해 8일 요건 충족 여부를 판단하는 데 활용. ②청주 WWT 변경계약서 관련 거래처 발송 메일(공사금액 변경신고 안내, 건설이 코드 087·090·091 건강연…',tool:'Claude',score:8},
-      {name:'허혜진',team:'노무관리팀',date:'9/8',title:'[사실] ㈜미투유코리아 건강보험 가입자 고지내역·국민연금결정내역 원본을 …',body:'[사실] 오늘 생성·수정된 산출물 직접 확인 — 미투유코리아 공단 고지내역 2종(건강보험·국민연금) 및 급여(작업).xlsb→급여(발송).xlsx, 쁨글로벌 강남점 급여대장·원천징수영수증 파일, 속초교동 \'근로내용확인신고서_8월.pdf\', 닥터함치과·미투유·쁨글로벌 급여대장(작업).xlsb 등이 오늘 타임스탬프로 확인됨. [추측] 이들 산출물은 급여파트 표…',tool:'Claude',score:8},
-      {name:'김화영',team:'노무관리팀',date:'9/8',title:'[추측] ㈜더홍코리아 다지점·다고용형태(정규/계약/시급제/사업소득/일용)…',body:'[사실] 공용 메모리 급여마감 기록이 오늘(9/8) 15:16(KST) 갱신됨 — ㈜더홍코리아 다지점(강릉·김해·순천·아산·안동·울산·전주·진주·청주·포항·본사) 급여 마감·검증 작업이 반영됨. [추측] 시급제 상담사 급여대장 통합 처리, 원주점 급여대장 분리·병합 판단(허솔님 메인대장 추가), 본사 \'변동사항 통보서\' 시트별 반영(정규/계약/시급제 ↔ 사…',tool:'Claude',score:7},
-      {name:'김수빈',team:'HR사업본부',date:'9/8',title:'메누버 근로계약서 작업 — 세부 대화 내용은 세션 조회 도구의 색인 누락…',body:'메누버 근로계약서 관련 작업에 AI를 활용함. (세션 원문 조회 불가로 세부 내역은 담당 노무사 구술 기준으로 기재)',tool:'Claude',score:7},
-      {name:'김동우',team:'기업지원팀',date:'9/8',title:'[Cowork] Gmail 자동분류 세션. 단순히 라벨을 붙이고 끝내지 …',body:'[Cowork] Gmail 연락일지 자동 기록 — \'newer_than:2d -in:draft\' 2페이지 74개 스레드를 스캔해 사업장DB와 대조, 발신/수신 구분과 지원금 유형(청일도·출산육아기·산재직장복귀·4대보험환급)까지 판별한 뒤 노션 연락일지에 30건을 신규 생성. threadId 기준 중복 4건 제외, 사업장DB 미등재 17건(대외협력팀 안내 메…',tool:'Claude',score:6},
-      {name:'함지우',team:'기업지원팀',date:'9/8',title:'[추측] 동방타워 건설기계조종사 환급 본검토가 가장 활용도 높은 순간으로…',body:'[업무일지 9/8 · 업무학습] 동방타워 건설기계조종사 환급 본검토 — 4대보험환급 본검토는 급여대장·보수총액 분석형 업무로 insurance-refund-review 스킬 도메인과 일치. 직접적 \'자동/일괄\' 문구는 없어 [추측] 태그로 집계. [연락일지 9/8 · 최초검토 3건] 건설업 검토("수익성 없음") / 임금채권부담금 검토("기초정보 없음, 건…',tool:'Claude',score:6},
-      {name:'정보람',team:'기업지원팀',date:'9/8',title:'[추측] 코워크 세션에서 뚜렷한 활용 사례가 확인되지 않아, 업무일지상 …',body:'※[사실] 코워크 세션 목록에는 오늘 관련 자동화(스케줄) 세션(Morning mail summary 실행 중 등)만 확인되고, 확실히 "오늘"로 특정 가능한 일반 대화형 세션은 없음. [불확실] "Boram weekly meeting minutes" 세션은 8/31~9/4 업무 기준 내용이라 오늘(9/8) 실행분인지 특정 어려움. [추측] 업무일지상 오늘…',tool:'Claude',score:5},
-      {name:'이새봄',team:'HR사업본부',date:'9/8',title:'[추측] GS엠비즈 매각 협상 통화 정리 — 「당초 100% 고용승계 →…',body:'[사실] 로컬 Cowork 사용자 세션 0건(목록 상단은 전부 자동 실행 세션, 비자동 세션 「주 4일 근무 시간급 계산」「근로시간 계산 및 표」는 8/3·8/4·8/27 일지에 기재된 과거 건). [추측] GS엠비즈 「2026.09.08. 김경진 책임님」 페이지 — 통화 내용이 \'팀장급 커뮤니케이션 방향 / 언론 대응 / 딜 쟁점 / HR 자문 일정\' 4…',tool:'Claude',score:5},
-      {name:'조소윤',team:'HR사업본부',date:'9/8',title:'[의견] 「Team schedule alert」 자동 일정 브리핑 → 팀…',body:'[사실] 오늘(2026-09-08) 확인된 AI 활용은 사전 설계된 자동화 스케줄 작업 2건 실행이며, 대화형(질의응답) 세션은 0건. ① [사실] 「Team schedule alert」: Google Calendar 조회 → HR팀 일정 브리핑 자동 생성(이승은 연차 9/1~9/22, 조팀 (사)대한곡물협회 외근 13:30~14:30, HR 회의 14:0…',tool:'Claude',score:4}
+      {name:'곽대영',team:'기업지원팀',date:'9/9',title:'김제공장 검산 직후 "저 계산에 오류가 있으려면 어떤 변수가 있을까?"라고 되물은 순간. 이미 "오류 0건"…',body:'집계창 2026-09-08 09:36 ~ 2026-09-09 09:34 (직전 일지 실행 이후). 사용자 세션 3건 + 자동 스케줄 2건(채점 제외). 3건 모두 임금채권부담금 경감 한 갈래로 연결된 심화 활용. ① (주)에이엠특장 김제공장 2025년 임채부담금경감 환급액 검산 — insurance-refund-settlement 스킬 발동. 수임료안내문 세부내역 6개 행(2023~2025) 전수 검증, 독립 3경로 검산 실행. 결과: 행별 계산 오류 0건, 통장반환 237,440원이 공단 지급명세(2026-09-07 지급)와 원…',tool:'Claude',score:9},
+      {name:'여명재',team:'기금팀',date:'9/9',title:'\'한 줄 추가로는 부족한 것 아니냐\'고 되물어 부분 수정에서 프롬프트 전면 재작성으로 방향을 바꾼 대화 AI…',body:'훅 로그·trace를 직접 읽혀 \'창 닫힌 시각을 대화일로 기록\'하던 구조 결함을 특정하고, Stop 훅 재설계와 약 60건 백필까지 실행시킴 Notion 공식 문서를 근거로 한도가 개인이 아닌 워크스페이스 공용임을 확정하고, 히스토리 동기화 조회 3곳의 view 모드 전환까지 맡김 루틴 프롬프트 2종을 현행본과 v2로 나란히 저장하게 해 롤백 가능한 형태로 개정',tool:'Claude',score:9},
+      {name:'김동우',team:'기업지원팀',date:'9/9',title:'[Cowork] Gmail 자동 라벨분류 세션. \'미라벨 메일을 규칙대로 분류해라\'라는 반복 작업 지시였는데…',body:'[Cowork] Gmail 연락일지 자동기록 — newer_than:2d 3페이지 115개 스레드를 스캔해 기존 \'GmailThread:\' 기록과 대조, 중복 32건·시스템메일 30건을 걷어내고 신규 26건만 [업무]진행상황 및 연락일지 DB에 생성. 사업장DB 미등록 26개 사업장(대외협력팀 찾아드림 안내 메일)은 미매칭으로 분리 보고했고, 한나요양원 동명 이슈와 biz@→sub4ins@ 내부메일 규칙 충돌 4건은 임의 판단 없이 \'확인 필요\'로 남김. [Cowork] Gmail 자동 라벨분류 — 미라벨 66건 중 34건에 담당…',tool:'Claude',score:8},
+      {name:'박진아',team:'경영지원팀',date:'9/9',title:'[사실] 전일 확정한 8월 손익계산서를 "대시보드에 반영해줘" 한 문장으로 요청해, AI가 xlsx를 파싱하…',body:'[사실] 분석 대상 세션 3건(능동 대화 2 + 스케줄 자동화 2, 세션 1건은 자동화·능동 대화 겸용 / daily-briefing-pja·daily-ai-usage-log 제외). ① daily-sales-fund-dashboard(9/8 기준) — 클로브 MCP 직접조회로 9/8 세금계산서 발행 6건/10,030,909원(롤앤롤 6,212,909 스팟 대형건 포함) 반영, 9월 누적 36건/45,866,547원, 소급정정 0건, 내부 자금집중 59,032,000원(국민 2계좌→기업 급여계좌·하나 주거래), 외부 순증감 −2,0…',tool:'Claude',score:8},
+      {name:'허혜진',team:'노무관리팀',date:'9/9',title:'[사실] 로우커피스탠드 네이버점 계약직 근로계약서를 VLOOKUP 연동 엑셀(근로계약서(RCS)_네이버점.x…',body:'[사실] 산출물 확인: 급여대장 xlsx/xlsb 작업본·발송본, 급여명세서 PDF, 근로계약서 VLOOKUP 엑셀·개인별 PDF, 4대보험 취득신고 DB 레코드 2건, 퇴직소득원천징수영수증 등 다수 생성·수정. [추측] 급여대장 작성·검증 및 세후 역산, 4대보험 취득신고 항목 정리, 근로계약서 자동생성(최저임금·수습·고정연장 검증), 일용직 근로내용확인신고서 작성 등에 AI(Claude) 보조를 활용한 것으로 추정.',tool:'Claude',score:8},
+      {name:'권은정',team:'노무관리팀',date:'9/9',title:'[사실] 14:41 발화에서 "특히 9/1·9/2·9/4·9/8은 지금 \'AI 활용 근거 미확인\'으로 잘못…',body:'[사실] 세션 1건(e6899c81), 사용자 타이핑 발화 5턴, 14:41~16:30. [사실] 도구 사용: notion-update-page 47회·Bash 32회·notion-query-data-sources 13회·notion-fetch 13회·ToolSearch 5회·Gmail search_threads 3회·notion-create-comment 3회·notion-search 3회·PowerShell 2회·notion-create-pages 2회·scheduled-tasks update 2회·notion-get-users…',tool:'Claude',score:7.8},
+      {name:'이새봄',team:'HR사업본부',date:'9/9',title:'[사실] 앨트웰텍(주) 기금 자문 → 정기 노동 법률자문 교차판매 클로징. 13:46 KST 임원성 회신 말…',body:'[사실] 집계창: 9/8 17:28 KST ~ 9/9 17:32 KST. 로컬 Cowork 사용자 세션 0건(세션 목록 상단 전부 자동 실행 세션 「Daily ai log saebom」) → 본 일지는 산출물(Gmail·노션·캘린더) 기반 재구성. [추측] 앨트웰텍 정기자문 견적 — 고객 요청(13:56 KST 메일) 후 43분 만에 견적서 PDF·회사소개서 첨부 메일 발송 + 노션 견적상담 카드 생성이 동시에 완료된 시간 구조로, dowon-quote-generator(단가표 기반 견적 PDF)·dowon-email(발송 메일)·…',tool:'Claude',score:7},
+      {name:'김도형',team:'노무관리팀',date:'9/9',title:'[사실] \'건설파트 AI 활용 조각 모음\' 페이지 정리 — 단순 나열이 아니라 15개 조각을 업무단계·상태·…',body:'[사실] 오늘 07:32 KST \'건설파트 AI 활용 조각 모음\' 노션 페이지가 대량 편집됨 — 페이지 자체 안내문에 \'각자의 Claude에게 한마디하면 기록됨\'이라 명시되어 있어, 오늘 Claude를 활용해 과거 활동을 검토·정리한 것으로 확인됨. [불확실] 같은 페이지의 개별 조각들에 찍힌 \'기록: 김도형·2026-09-09\'는 표에 적어넣은 시점일 뿐이며, 해당 업무(계약서 검토, 확정정산 역설계 등)가 오늘 새로 수행됐다는 뜻인지는 확인 불가. [추측] 오늘 오후 원주단구동14통(쿱엘리베이터) 납부확인서 PDF와 현대EL 정…',tool:'Claude',score:3},
+      {name:'박형숙',team:'경영지원팀',date:'9/9',title:'자동화 과정에서 대시보드 파일 손상(플레이스홀더 오류)을 자동 감지해 반영 전 걸러냄',body:'1. 인사팀 대시보드 자동 동기화 (KPI·계약/입금 현황 갱신, 2회 실행) 2. 우수사례(AI 활용 베스트케이스) 자동 갱신 및 노션 활용일지 취합 3. AI 활용일지 원시 데이터 정리 자동화 (스프레드시트 반영용) 4. AI 활용일지 초안 작성 자동화 (본 작업)',tool:'Claude',score:3}
     ],
-  bestCaseRangeLabel: '9/8',
+  bestCaseRangeLabel: '9/9',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:32, weekEntries:12, daily:[
+    {team:'기업지원팀', total:11, avgRate:30, weekEntries:16, daily:[
       {dateStr:'2026-09-07', used:4, entries:6, rate:36, isFuture:false},
-      {dateStr:'2026-09-08', used:3, entries:6, rate:27, isFuture:false},
-      {dateStr:'2026-09-09', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-08', used:4, entries:7, rate:36, isFuture:false},
+      {dateStr:'2026-09-09', used:2, entries:3, rate:18, isFuture:false},
       {dateStr:'2026-09-10', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-11', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:25, weekEntries:9, daily:[
-      {dateStr:'2026-09-07', used:2, entries:4, rate:20, isFuture:false},
-      {dateStr:'2026-09-08', used:3, entries:5, rate:30, isFuture:false},
-      {dateStr:'2026-09-09', used:0, entries:0, rate:0, isFuture:true},
+    {team:'노무관리팀', total:10, avgRate:33, weekEntries:17, daily:[
+      {dateStr:'2026-09-07', used:3, entries:5, rate:30, isFuture:false},
+      {dateStr:'2026-09-08', used:4, entries:6, rate:40, isFuture:false},
+      {dateStr:'2026-09-09', used:3, entries:6, rate:30, isFuture:false},
       {dateStr:'2026-09-10', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-11', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'HR사업본부', total:8, avgRate:26, weekEntries:7, daily:[
+    {team:'HR사업본부', total:8, avgRate:21, weekEntries:10, daily:[
       {dateStr:'2026-09-07', used:1, entries:3, rate:13, isFuture:false},
       {dateStr:'2026-09-08', used:3, entries:4, rate:38, isFuture:false},
-      {dateStr:'2026-09-09', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-09', used:1, entries:3, rate:13, isFuture:false},
       {dateStr:'2026-09-10', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-11', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'경영지원팀', total:3, avgRate:50, weekEntries:4, daily:[
+    {team:'경영지원팀', total:3, avgRate:56, weekEntries:6, daily:[
       {dateStr:'2026-09-07', used:2, entries:3, rate:67, isFuture:false},
       {dateStr:'2026-09-08', used:1, entries:1, rate:33, isFuture:false},
-      {dateStr:'2026-09-09', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-09', used:2, entries:2, rate:67, isFuture:false},
       {dateStr:'2026-09-10', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-11', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'대외협력팀', total:3, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-09-07', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-09-08', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-09-09', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-09', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-09-10', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-11', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'기금팀', total:1, avgRate:50, weekEntries:1, daily:[
+    {team:'기금팀', total:1, avgRate:67, weekEntries:2, daily:[
       {dateStr:'2026-09-07', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-09-08', used:1, entries:1, rate:100, isFuture:false},
-      {dateStr:'2026-09-09', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-09', used:1, entries:1, rate:100, isFuture:false},
       {dateStr:'2026-09-10', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-11', used:0, entries:0, rate:0, isFuture:true}
     ]}
