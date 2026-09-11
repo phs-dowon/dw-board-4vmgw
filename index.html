@@ -856,7 +856,7 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
       <div class="col-hint">이번 달(9월) 첫 계약 입력 대기 중 — 8월 마지막 5건 표시</div><div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">6</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 4건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">15</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 4건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1075,6 +1075,15 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
+  {co:'(주)롤*롤',amt:6834200,time:'9/10'},
+  {co:'일*새*을*고',amt:2346100,time:'9/9'},
+  {co:'(주)올*마*팅*룹',amt:1435500,time:'9/9'},
+  {co:'(주)킴*텍',amt:396000,time:'9/9'},
+  {co:'농*회*법*(*)*신*프*',amt:322300,time:'9/9'},
+  {co:'로*배*설*',amt:275000,time:'9/9'},
+  {co:'(주)원*밀*디*인',amt:165000,time:'9/9'},
+  {co:'하*테*',amt:220000,time:'9/9'},
+  {co:'(주)원*건*',amt:165000,time:'9/9'},
   {co:'희*병*',amt:396000,time:'9/7'},
   {co:'다*비*(주)',amt:305200,time:'9/7'},
   {co:'오*푸*셰*애*',amt:1100000,time:'9/3'},
@@ -1129,7 +1138,7 @@ let AI_MVP_DATA = {
       {dateStr:'2026-09-07', used:4, entries:6, rate:36, isFuture:false},
       {dateStr:'2026-09-08', used:4, entries:7, rate:36, isFuture:false},
       {dateStr:'2026-09-09', used:3, entries:4, rate:27, isFuture:false},
-      {dateStr:'2026-09-10', used:3, entries:4, rate:27, isFuture:false},
+      {dateStr:'2026-09-10', used:4, entries:5, rate:36, isFuture:false},
       {dateStr:'2026-09-11', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'노무관리팀', total:10, avgRate:33, weekEntries:22, daily:[
