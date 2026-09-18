@@ -852,11 +852,11 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
 <section class="card contract-card live-row" id="cardDual" aria-label="계약 체결 및 입금 완료 실시간 피드" style="grid-row:3;grid-column:1/3;">
   <div class="dual-feed">
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">2</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 5건 · 8월 15건 · 9월 2건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">3</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 5건 · 8월 15건 · 9월 3건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">29</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 4건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">36</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 36건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1060,6 +1060,7 @@ setTimeout(() => { updateDonut(); }, 600);
 
 /* ── FEEDS ── */
 const cHist=[
+  {team:"급여",co:"하*드*리*",cat:"신규",time:"9/14"},
   {team:"법률",co:"블*터 앤 미*어",cat:"신규",time:"9/14"},
   {team:"건설",co:"제*에*치*",cat:"신규",time:"9/5"}
 ];
@@ -1070,6 +1071,13 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
+  {co:'김*중*새*을*고',amt:1782000,time:'9/17'},
+  {co:'가*트*원',amt:990000,time:'9/17'},
+  {co:'예*병*',amt:66000,time:'9/17'},
+  {co:'(주)케*퍼*트',amt:1443700,time:'9/16'},
+  {co:'중*수*성*가*인*지*터',amt:589200,time:'9/15'},
+  {co:'평*에*치*이*6*의*',amt:220000,time:'9/15'},
+  {co:'평*에*치*이*6*의*',amt:110000,time:'9/15'},
   {co:'아*엠*러*',amt:110000,time:'9/14'},
   {co:'삼*조*',amt:220000,time:'9/14'},
   {co:'다*(주)',amt:165000,time:'9/14'},
@@ -3042,7 +3050,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=15,pmT=4,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=3,pmT=36,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
