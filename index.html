@@ -856,7 +856,7 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">37</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 37건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">42</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 42건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1075,6 +1075,11 @@ const pHist = [
   {co:'김*중*새*을*고',amt:1782000,time:'9/17'},
   {co:'가*트*원',amt:990000,time:'9/17'},
   {co:'예*병*',amt:66000,time:'9/17'},
+  {co:'(주)맥*에*지*루*',amt:132000,time:'9/17'},
+  {co:'청*이*지',amt:198000,time:'9/17'},
+  {co:'(주)하*드*리*금*지*)',amt:682000,time:'9/17'},
+  {co:'한*일*트*',amt:110000,time:'9/17'},
+  {co:'주*회*민*크',amt:275000,time:'9/17'},
   {co:'(주)케*퍼*트',amt:1443700,time:'9/16'},
   {co:'중*수*성*가*인*지*터',amt:589200,time:'9/15'},
   {co:'평*에*치*이*6*의*',amt:220000,time:'9/15'},
@@ -1142,21 +1147,22 @@ let AI_MVP_DATA = {
       {name:'권은정',team:'노무관리팀',date:'9/21',title:'[사실] 11:07 "1. 황계희는 일단 반영해서 [추계액 계산파일]에 반영할 예정 | 2. 조현서는 대표…',body:'[사실] 로컬 전사 세션 2건(0d7a23fb 10:54~14:10, 94c051da 15:41~17:07), 사용자 발화(타이핑) 총 11턴. [사실] 도구 사용: Bash 94회, PowerShell 12회, get_law_article_tool 10회, Write 6회, SendUserFile 3회, ToolSearch 2회, search_precedent_tool 1회, Edit 1회, mark_chapter 1회, AskUserQuestion 1회. [추측] Bash/PowerShell 다수 사용은 엑셀 COM 자동화로 두…',tool:'Claude',score:7.7},
       {name:'허혜진',team:'노무관리팀',date:'9/21',title:'[사실] 동월 입사(9/9)·퇴사(9/11) 근로자 1명에 대해 취득·상실 신고를 같은 날 동시 처리하여 D…',body:'[사실] 노션 취득/상실신고 DB 레코드 3건 작성(취득 1·상실 2): 4대보험 가입여부, 취득·상실부호, 상실사유, 계약직여부, 소정근로시간·보수월액, 보수총액 등 항목 입력. [사실] 급여대장 3건 작성·수정 후 송부(쁨글로벌 강남역점 8월 총괄인센티브 정정, 온빛 9월, 삼우씨에스씨 9월 주차비 반영). [추측] 취득·상실 부호 매핑, 급여대장 인센티브·주차비 반영 및 검증, 퇴사자 보수총액 산정 과정에서 AI 보조 활용 가능성. [불확실] 각 단계에서 AI를 실제로 어느 정도 사용했는지는 산출물만으로는 단정 불가.',tool:'Claude',score:7},
       {name:'박진아',team:'경영지원팀',date:'9/21',title:'[사실] 매출·자금 대시보드 자동화가 지난 회차(9/18)에서 발견됐던 PDF 데이터 정체·빌드스탬프 미갱신…',body:'[사실] 매출·자금 대시보드 자동화(daily-sales-fund-dashboard)가 오늘 10:12 KST 정상 갱신(PDF·HTML·xlsx 동시 생성, 노무법인도원_매출자금현황_20260921.pdf) — 9/18자에 발견된 PDF 데이터 정체·BUILD_STAMP 미갱신 문제가 재발하지 않고 깔끔하게 완료된 것으로 확인됨. [사실] 통장거래내역 동기화(2026_통합입출금내역.xlsx)가 11:21 KST 갱신됨. [사실] 4대보험 확정보험료(가정산) 관련 안내문 2건(사전통지 소명방법, 확정보험료 보수총액 산정방법)을 담은…',tool:'Claude',score:5},
-      {name:'김동우',team:'기업지원팀',date:'9/21',title:'[Claude Code] NAS 감사 리포트 Slack 전송 건. \'이 파일을 한 글자도 수정·요약·추가하지…',body:'[Cowork] Gmail auto sort(09시경 실행): 받은편지함 최근 2일 미분류 스레드 3건을 자동 검토·라벨링(전부 시스템알림성 메일로 판정, 신규 발신자 1건은 별도 확인 요청 플래그). [Cowork] Gmail vault sync(09시경 실행): 라벨 매칭 메일 자체가 0건이었고, 설계상 필요한 Obsidian vault 폴더가 스케줄 세션에 연결되어 있지 않아 노트 생성 불가 상태를 재확인만 함(처리 0건). [Claude Code] NAS 감사 스크립트 산출물(미발송_2026-09-21.txt)을 \'한 글자도…',tool:'Claude',score:4}
+      {name:'김동우',team:'기업지원팀',date:'9/21',title:'[Claude Code] NAS 감사 리포트 Slack 전송 건. \'이 파일을 한 글자도 수정·요약·추가하지…',body:'[Cowork] Gmail auto sort(09시경 실행): 받은편지함 최근 2일 미분류 스레드 3건을 자동 검토·라벨링(전부 시스템알림성 메일로 판정, 신규 발신자 1건은 별도 확인 요청 플래그). [Cowork] Gmail vault sync(09시경 실행): 라벨 매칭 메일 자체가 0건이었고, 설계상 필요한 Obsidian vault 폴더가 스케줄 세션에 연결되어 있지 않아 노트 생성 불가 상태를 재확인만 함(처리 0건). [Claude Code] NAS 감사 스크립트 산출물(미발송_2026-09-21.txt)을 \'한 글자도…',tool:'Claude',score:4},
+      {name:'함지우',team:'기업지원팀',date:'9/21',title:'한국보험금융(주)·(주)젬 임금채권부담금·적용제외·건설업 검토 3건에서, 노무비율(21~24%) 산출과 특고…',body:'[연락일지 9/21·최초검토] 4대보험 환급 최초검토(한국보험금융(주)) — 건설업 본사로 적용제외 판단, 임채 개별진행불가 결론. 토목 하도급 구조, 승인하도급·관급 원도급 비중, 특고 관리번호 관리 여부, 노무비율 21~24%까지 교차분석해 \'환급 가능성 낮음\'으로 판정. [업무일지 9/18(9/21 팔로업 반영)·사대보험검토] 한국보험금융(주) 임금채권부담금 추가검토(2011년 가입확인·옛 거절이력) / (주)젬 건설업 최초검토(과소신고 추정). 복수 판단기준을 종합하는 성격의 최초검토로 [추측] AI 보조 분석 가능성이 있으…',tool:'Claude',score:0}
     ],
   bestCaseRangeLabel: '9/21',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:18, weekEntries:2, daily:[
-      {dateStr:'2026-09-21', used:2, entries:2, rate:18, isFuture:false},
+    {team:'기업지원팀', total:11, avgRate:27, weekEntries:3, daily:[
+      {dateStr:'2026-09-21', used:3, entries:3, rate:27, isFuture:false},
       {dateStr:'2026-09-22', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-23', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-24', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-25', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:30, weekEntries:5, daily:[
-      {dateStr:'2026-09-21', used:3, entries:5, rate:30, isFuture:false},
+    {team:'노무관리팀', total:10, avgRate:30, weekEntries:6, daily:[
+      {dateStr:'2026-09-21', used:3, entries:6, rate:30, isFuture:false},
       {dateStr:'2026-09-22', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-23', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-24', used:0, entries:0, rate:0, isFuture:true},
@@ -3050,7 +3056,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=3,pmT=36,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=3,pmT=42,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
