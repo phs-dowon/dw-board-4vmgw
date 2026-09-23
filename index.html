@@ -856,7 +856,7 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">46</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 46건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">51</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 305건 · 9월 51건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1071,6 +1071,11 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
+  {co:'(주)핸*',amt:2109800,time:'9/22'},
+  {co:'경*물*(주)',amt:8208200,time:'9/22'},
+  {co:'민*레*을(주)',amt:1188000,time:'9/22'},
+  {co:'당*새*을*고',amt:957000,time:'9/22'},
+  {co:'세*법* 베*',amt:866200,time:'9/21'},
   {co:'화*요*원',amt:412500,time:'9/21'},
   {co:'서*노*스*원',amt:1478600,time:'9/21'},
   {co:'한*에*로*페*스',amt:2200000,time:'9/21'},
@@ -1147,22 +1152,22 @@ let AI_MVP_DATA = {
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
       {name:'곽대영',team:'기업지원팀',date:'9/22',title:'25년 2분기 기존 지원금 결정내역(캡쳐 이미지)을 올려 "어떻게 계산했는지 확인해줘"라고 역산 검증을 시킨…',body:'[집계창] 2026-09-21 09:36(직전 일지) ~ 2026-09-22 09:39. 사용자 세션 1건(스케줄 세션 제외). ① 「고령자 고용지원금 대상자 검토」 — (주)대원관광 건, 8회 이상 왕복의 단일 심층 세션 - 고용보험 취득·상실 반복 시 고령근로자수 산정 기준 질의 → 근로기간 단절 여부에 따른 판단 정리(고용24 FAQ 2025.10.01. 수정분 인용) - 25년 2분기 기존 신청내역(첨부 이미지) 역산 검증: 월별 7·7·6명, 월평균 6.666명, 기준인원 4.1명, 증가 3명 × 30만원 = 900,00…',tool:'Claude',score:9},
+      {name:'함지우',team:'기업지원팀',date:'9/22',title:'4대보험 환급 수임료 안내문 11건 발송 건. 적용제외 6건·임채부담금 경감 5건, 총 1…',body:'4대보험 환급 수임료 안내문 11건 발송 건. 적용제외 6건·임채부담금 경감 5건, 총 11개 사업장에 대한 수임료 안내문을 템플릿 기반으로 일괄 작성하고 Gmail 발송이력 기준으로 사업장별 발송 시각을 전건 기록했으며, 한별테크 건은 메일 반송(비활성 메일함)까지 즉시 확인. 이데미쯔전자재료한국 하승호 대리의 개별 문의(임채부담금 경감 개념 질의)만 사람이 직접 회수하여 응대 대기 처리함 — 반복적 대량 문서 작성은 위임하고 예외 문의만 본인이 처리하는 좋은 위임 패턴.',tool:'Claude',score:8},
       {name:'권은정',team:'노무관리팀',date:'9/22',title:'[사실] 09-22 15:59 "[기타수당]이 월급여에 포함된 항목이라서 일할계산이 되었으면 좋겠거든? [기…',body:'[사실] 세션 1개(94c051da), 09-21 17:04~09-22 16:33 이어쓰기, 사용자 타이핑 발화 10턴. [사실] 도구 사용: Bash 98회(엑셀 COM PowerShell로 xlsb 비교·수식 삽입), mark_chapter 1회, ToolSearch 1회. [사실] 파일 경로를 @첨부로 직접 지정하고 "다른 항목은 절대 건들이지 말고" 같은 제약을 사전에 명시. [사실] 고용보험 고지내역 기준 공제, 상여 소득세 1개월 합산 유지 등 처리 방식을 대화 중 직접 판단해 지시. [불확실] 「급여파트 AI 활용 조각…',tool:'Claude',score:7.9},
       {name:'박혜빈',team:'노무관리팀',date:'9/22',title:'[사실] 4개 유치원 파일을 일괄 처리하지 않고, 사업장별 열 순서 차이를 먼저 개별 확인한 뒤 반영하고,…',body:'[사실] 오늘 세션은 1건으로, (주)성민학원 교육청 제출용 폴더의 8월→9월 급여명세서 갱신 작업에 Claude Code(dowon-payroll-monthly-close 스킬)를 활용함. 사용자 지시는 \'교육청 제출용 폴더에 파일들 다 9월로 바꿔주고 급여대장 작업 파일 참고해서 수정, 8월 폴더도 참고해서 틀리지 않게\' 한 건이었고, 이후 92턴에 걸쳐 자율적으로 처리함. [사실] 4개 유치원 파일의 파일명·문서 내 제목(\'( 08 )월\'→\'( 09 )월\')과 본봉·수당·소득세·지방소득세·연금(사학/국민)·사학대여상환금·사회보…',tool:'Claude',score:7},
       {name:'이새봄',team:'HR사업본부',date:'9/22',title:'[사실] 남룡호 건 요양급여신청서 작성 — 신청 사업장을 마지막 근무 현장 원수급인 (주)동림(관리번호 40…',body:'[사실] 사건·문서 자동화 — Cowork에서 산재서류자동화 스킬(sanjae-docs-kr)로 남룡호 건 요양급여신청서·대리인선임신고서를 작성하고, 신청 사업장·관할지사·서명란 처리 방식(도장 이미지 삽입 철회, 수기 날인)을 확정함 (근거: C경로 범모리 /areas/nam-ryongho-workers-comp.md 17:28 갱신, sources: cowork). [사실] 문서 — 재해발생경위서 서식 원칙(바탕체 12pt·장제목 16pt, footer·쉝번호, 사건개요 박스, 정량표는 세로 카드형)을 Claude에 지시·정립…',tool:'Claude',score:7},
       {name:'김화영',team:'노무관리팀',date:'9/22',title:'[추측] 개인 Notion 업무일지 구조와 Google Drive·korean-law MCP 연동 방식을 정…',body:'[불확실] 본 자동실행(오후 5시 스케줄, 클라우드) 환경에서는 오늘 대화 원문(transcript)에 직접 접근하는 도구가 없어, 오늘 11:27(KST)에 갱신된 메모리의 durable 기록으로 활용 내역을 추정함. [추측] 오늘 활용 추정 주제: (1) Claude Code 설치·셋업 탐색, (2) 개인 Notion 업무일지(날짜별 \'업무 세부내역\') 연동 방식 정리, (3) Google Drive 파일 검색(fullText contains)·다운로드(2단계 JSON 디코드 후 base64) 방법, (4) 도원korean-la…',tool:'Claude',score:6},
       {name:'정보람',team:'기업지원팀',date:'9/22',title:'[사실] 지시: 매일 아침 담당 299개 사업장 Gmail 수신함 자동 스캔 → 결과: (주)제이에이치디(J…',body:'[사실] 09/22 코워크 자동화 “Morning mail summary” 실행, 담당 사업장 299개 Gmail(9/21~22) 수신메일 50건 검토·2건 요약. [사실] (주)제이에이치디(JHD) 청년일자리도약장려금 참여서류 회신 건은 같은 날 업무일지의 청일도 명단통보/지원금 보완/자료 회신/자료 검토 4건과 대응됨. [추측] 송림새마을금고 확인전화·재스크래핑·대리인 갱신 13건 등 나머지 업무는 코워크 세션에서 직접 확인 안 됨, Claude 대화형 활용 여부 불확실. ※ 본 일지는 코워크 세션+Notion 업무일지 기준이며…',tool:'Claude',score:6},
       {name:'김도형',team:'노무관리팀',date:'9/22',title:'[추측] 현대EL 9월 정산대상 계약서 검토(w/클로드) — 협력사 계약서류를 서류구비·금액·보험료 등 다항…',body:'[사실] 노션에 \'9월 적용신고서 만들기(w/클로드)\', \'9월 정산대상 계약서 검토(w/클로드)\' 페이지가 오늘 생성되어, 현대EL 적용신고서 작성과 계약서 검토 업무에 클로드를 활용한 직접 증거가 확인됨. [불확실] 그 외 확정정산·완일 신고·건설 협력사 파일정리 업무는 활동기록만으로 AI 활용 여부를 확인할 수 없음.',tool:'Claude',score:5},
-      {name:'김동우',team:'기업지원팀',date:'9/22',title:'[Cowork] Gmail auto sort. 받은편지함 65건이라는 처리량을 보고 메인 세션이 직접 하나씩…',body:'[Cowork] Gmail auto sort — 받은편지함 최근 2일치 65건을 서브에이전트에 위임해 분류 규칙(시스템알림→대외협력팀→수임료→김동우 담당→매니저별) 순서대로 적용. 시스템알림 9건, 대외협력팀 7건(전은미5·박수아2), 수임료 5건, 김동우 별표 5건, 매니저별 19건(정보람8·곽대영5·길경찬2·손지영2·함지우1·김우석1·박유경1), 미분류 12건, 기존라벨 skip 7건으로 라벨링 완료. [Cowork] Gmail vault sync — 라벨 \'기업지원팀/김동우\' 기준 최근 2일 메일 스레드 5건(부산아동병원,…',tool:'Claude',score:5},
-      {name:'정보람',team:'기업지원팀',date:'9/22',title:'[불확실] 오늘 날짜에 한정해 확인 가능한 대화형 활용 사례가 없음. 코워크 세션은 자동 스케줄 작업(아침…',body:'[사실] 오늘 코워크 세션 목록에는 자동 스케줄 작업(아침 메일 요약, 활용일지 기록)만 확인됨. [사실] Notion 업무일지 9/22 그룹에는 ‘사업장 소통’ 상태 항목 1건이 있으나 사업장명·작업내용은 미기재. [불확실] 사이드바 일반 채팅(표/문서 작업 등) 실무 활용 여부는 세션 목록에 나타나지 않아 확인 불가. ※ 본 일지는 코워크 세션+Notion 업무일지 기준이며, 일반 채팅(표/문서 작업 등)은 자동 수집되지 않아 누락될 수 있음.',tool:'Claude',score:5}
+      {name:'김동우',team:'기업지원팀',date:'9/22',title:'[Cowork] Gmail auto sort. 받은편지함 65건이라는 처리량을 보고 메인 세션이 직접 하나씩…',body:'[Cowork] Gmail auto sort — 받은편지함 최근 2일치 65건을 서브에이전트에 위임해 분류 규칙(시스템알림→대외협력팀→수임료→김동우 담당→매니저별) 순서대로 적용. 시스템알림 9건, 대외협력팀 7건(전은미5·박수아2), 수임료 5건, 김동우 별표 5건, 매니저별 19건(정보람8·곽대영5·길경찬2·손지영2·함지우1·김우석1·박유경1), 미분류 12건, 기존라벨 skip 7건으로 라벨링 완료. [Cowork] Gmail vault sync — 라벨 \'기업지원팀/김동우\' 기준 최근 2일 메일 스레드 5건(부산아동병원,…',tool:'Claude',score:5}
     ],
   bestCaseRangeLabel: '9/22',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:32, weekEntries:7, daily:[
+    {team:'기업지원팀', total:11, avgRate:36, weekEntries:8, daily:[
       {dateStr:'2026-09-21', used:3, entries:3, rate:27, isFuture:false},
-      {dateStr:'2026-09-22', used:4, entries:4, rate:36, isFuture:false},
+      {dateStr:'2026-09-22', used:5, entries:5, rate:45, isFuture:false},
       {dateStr:'2026-09-23', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-24', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-09-25', used:0, entries:0, rate:0, isFuture:true}
