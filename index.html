@@ -1165,56 +1165,55 @@ let AI_MVP_DATA = {
   ],
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
-      {name:'김화영',team:'노무관리팀',date:'9/28',title:'KTM모바일 4대보험 고지내역과 급여대장을 개인별로 교차검증하는 과정에서, 5월 퇴사자 조수민 님의 국민연금…',body:'오늘은 급여·원천세 검증 업무 전반에 Claude를 활용함. (1) ㈜케이티엠모바일 원천징수이행상황신고서 인원 산정 기준을 검토해 \'지급받은 인원\' 기준(지급액 0원 휴직자 제외)을 확정하고, 급여대장 121행 중 지급인원 119명이 정상임을 확인. (2) 국민연금·건강보험·고용보험 고지내역 개인별 시트를 주민번호 기준으로 급여대장과 대조해 4대보험 고지↔급여공제 차이를 인별로 특정. (3) 세무법인혜움 급여대장에서 연협 대상자 44명의 통상시급·수당을 2026연협 시트와 주민번호 매칭으로 재계산(비대상 20명은 유지, 산출 총액…',tool:'Claude',score:9},
-      {name:'권은정',team:'노무관리팀',date:'9/28',title:'[사실] 14:40 평택에이치케이365의원 세션 발화: 「급여대장 추가휴일 바뀌었거든? 여기가 일 근무시간이…',body:'[사실] 대화 세션 2건(09:06~11:07 성신한방병원 / 14:05~17:15 평택에이치케이365의원), 사용자 발화 16턴. [사실] 도구 사용: Bash 105, 법령 MCP 26(조문조회 22·판례검색 2·판례상세 1·법령검색 1), PowerShell 19, Edit 8, ToolSearch 6, Read 5, Write 2, Agent 2, 지메일 검색 2. [사실] 지시 방식: 두 세션 모두 대상 파일 경로를 @로 직접 지정해 시작했고, 사업장 확인값(추가근무 3시간 인정 2명, 월급제 퇴사자 일할계산, 명세서는 위…',tool:'Claude',score:8.4},
-      {name:'이새봄',team:'HR사업본부',date:'9/28',title:'[사실] GS엠비즈 영업양수도 건에서 모회사 보고용 HR Process(안)에 대한 질의 6건에 근로기준법…',body:'[사실] (경로 B) GS엠비즈 건 — 근로기준법 §24③·§26·§27, 대법원 2000두8455 등 법령·판례를 인용해 승계 HR Process(안) 관련 질의 6건에 구조화된 회신을 작성, Gmail로 실제 발송함(Notion 사업장 히스토리 및 Gmail 발신함으로 교차 확인). [추측] (경로 B) 산재 블로그 「산재일기 8」 원고는 기존 연재 형식·말투 원칙(메모리 기록 기준)에 따라 작성된 것으로 보이며, 도원(기업용) 블로그 컨텐츠 DB에 원고작성자 이새봄으로 첨부됨. [불확실] (경로 B) 쁨글로벌의원 심문회의 대응…',tool:'Claude',score:8},
-      {name:'김동우',team:'기업지원팀',date:'9/28',title:'[Claude Code] 위임장·대리인선임신고서 PDF 변환 건. pdf2docx(표·형광펜 위치 손상)와…',body:'[Claude Code] 12:51~12:55 KST, 4대보험 지원금 최초자료 요청 서류(위임장·대리인선임신고서, 형광펜·V표시 주석 포함 PDF)를 서식 손상 없이 워드파일로 변환. pdf2docx(표·줄바꿈 깨짐)→MS Word 자체 변환기(저장 오류)가 순차 실패하자 PyMuPDF(fitz)로 페이지를 300dpi 이미지화해 python-docx로 삽입하는 커스텀 스크립트를 직접 작성. 결과물을 다시 PDF로 내보내 원본과 페이지별 픽셀 diff로 검증(평균 오차 2.57) 후 원본과 같은 폴더에 저장. [자동화 인프라] 로…',tool:'Claude',score:7},
-      {name:'허혜진',team:'노무관리팀',date:'9/28',title:'[사실] 하루 4개 사업장 9월/8월 급여대장을 마감·송부. [추측] 급여 항목 계산·검산에 AI 보조 활용…',body:'[사실] 노션 취득/상실신고 DB 레코드 작성 1건 + 4개 사업장 급여대장 작성·송부 산출물 확인. [추측] 급여대장 계산·검증, 취득/상실신고 정리 과정에서 AI 보조를 활용했을 것으로 추정(구체 활용 방식은 산출물만으로는 단정 불가).',tool:'Claude',score:7},
-      {name:'김동우',team:'기업지원팀',date:'9/28',title:'[Cowork] gmail-auto-sort — 약 201건에 달하는 Gmail 스레드를 사람이 페이지네이션…',body:'[Cowork] daily-mail-log: bash로 미회신 발신메일 대조(571건 중 3건 회신 확인·제거, 568건 잔존) → Excel(통합데이터_2026-09.xlsx)에 월별 스냅샷 누적 저장 → Slack(00_기업지원팀_자동알림)에 통합 브리핑 발송. 실무 To-Do 스크리닝 JSON이 63일간(7/22 이후) 갱신되지 않은 이상 징후를 스스로 포착해 보고함. [Cowork] gmail-auto-sort: 최근 2일치 Gmail 약 201건 스레드를 서브에이전트(Agent tool)에 위임해 매니저별(곽대영9·박유경1…',tool:'Claude',score:5},
-      {name:'함지우',team:'기업지원팀',date:'9/28',title:'[불확실] 직접 증거가 없어 특정 불가. 대화 이력 확보 후 재판정 필요.',body:'[불확실] 탐지 신뢰도 낮음 — 미활용 아님. 1-C(코워크 세션 조회) 도구(list_sessions/read_transcript)가 이 실행 환경에 연결되지 않아 대화 이력을 읽지 못함. [사실] 업무일지 2건 본문에 클로드/AI/자동/일괄 등 직접 증거 문구 없음(혜움 건은 본문 공란). [추측] 연락일지 분석일자 항목이 동일 제목 패턴으로 다건(대리인 선임 갱신안내 약 12건 등) 생성돼 있고 Gmail 스레드 링크가 붙어 있어 메일 연동·일괄 처리 성격이나, 작성 주체(본인 vs 팀 공용 자동화)가 특정되지 않아 본인 활용…',tool:'Claude',score:0}
+      {name:'권은정',team:'노무관리팀',date:'9/29',title:'[사실] 9/29 13:40 "퇴직금 잘 맞게 구해졌는지 확인 해볼래? 두번째 파일에 9월 급여는 무시하고…',body:'[사실] 대화 세션 5건(9/28 17:15 ~ 9/29 16:54), 사용자 발화 37턴(스킬 로드 1건 포함). [사실] 도구: Bash 73·PowerShell 57·Read 34·Edit 7·Grep 5·Notion 검색/조회/생성/fetch 11·Write 2·Glob 1·Browser 1·Skill 1(health-settlement). [사실] 대부분 @파일경로로 대상 파일을 지정했고, "다른건 건들이지 말고", "평균임금은 내가 급여대장 열어서 볼거니까 재직일수 관련해서만 구해줘"처럼 범위 제약을 먼저 줬다. [사실]…',tool:'Claude',score:8.8},
+      {name:'이새봄',team:'HR사업본부',date:'9/29',title:'[추측] 연차유급휴가와 출산전후휴가 지급 기준 해석(법령 해석 성격) 또는 우시 조사 준비(사건 실무)가 활…',body:'[사실] (사용자 제공 캡처·본인 확인, 경로 A 대체) 오늘 Claude 대화 6건이 확인됨: ① 조사 일정 성명별 정리(사건·문서), ② 연차유급휴가와 출산전후휴가 지급 기준 해석(자문·법리), ③ Notion 질병 분류 카테고리 추가(자동화), ④ 징계서식 수정(문서), ⑤ 우시 직장내 괴롭힘 조사 준비(사건), ⑥ CEO 메일 대응 방식 검토(자문·전략). [사실] 메모리 C경로의 쁨글로벌 징계서식·우시 조사 준비 기록이 위 ④·⑤와 일치함. [불확실] 캡처는 대화 제목만 보여 질문 수준·산출물 내용·인용 근거는 확인되지 않…',tool:'Claude',score:7},
+      {name:'황지나',team:'노무관리팀',date:'9/29',title:'일용직 퇴직금 계산 — 근로일수·근로단절 여부 판단이 필요한 산정 작업을 AI로 정리해 고객 회신 근거로 활…',body:'① 일용직 근로자 퇴직금 계산: 일용직 근로자의 퇴직금 대상 여부와 금액 산정에 AI를 활용함. ② 신화건설 계약서 공사금액 확인: 신화건설 공사계약서에서 공사금액 등 신고·ERP 입력에 필요한 정보를 추출·정리하는 데 AI를 활용함.',tool:'Claude',score:7},
+      {name:'허혜진',team:'노무관리팀',date:'9/29',title:'[사실] (주)경일코퍼레이션 9월 급여대장 — 상여금 선지급 처리와 잔업수당의 추가연장수당 재분류가 포함된…',body:'[사실] 급여대장 1건(경일코퍼레이션), 근로계약서 2건(스킨엑스 신규 입사자), 퇴직금 재산정 관련 1건(쁨글로벌 강남점)의 산출물 생성·발송을 확인. [추측] 급여대장 작성 시 상여 선지급 처리 및 잔업수당→추가연장수당 재분류 계산, 근로계약서 문안 작성·검증, 퇴직소득 재산정 과정에서 AI 보조를 활용한 것으로 추정.',tool:'Claude',score:6},
+      {name:'김동우',team:'기업지원팀',date:'9/29',title:'[Claude Code] NAS 감사 리포트 Slack 자동 발송 파이프라인(세션 9d74e893 → c04…',body:'[Claude Code] 업무일지 자동화 세션 2건(6c1f17b4, 90cc47bb) — 노션 [업무]진행상황·연락일지 및 [업무|자료요청] 자료요청관리 기록과 Claude Code 세션 다이제스트를 읽어 노션 「Today To-do」 DB에 당일 업무일지 항목을 자동 생성. 산출물: "임채 진행불가 안내·자료요청 갱신 2곳", "도촌행복정형외과의원 임채·적용제외 최초검토", "Aside 연계 자동화 기획안 5종 정리", "NAS 점검 리포트 슬랙 자동 전송" 등 업무 항목 페이지 생성. [Claude Code] NAS 감사 알…',tool:'Claude',score:5},
+      {name:'정보람',team:'기업지원팀',date:'9/29',title:'[추측] 코워크 세션을 확인하지 못해 확정 불가. 업무일지 기준으로는 어드민 로직 오류를 사례(재해자·요양기…',body:'[추측] 업무일지상 9/29 업무는 대리인 갱신 메일 발송(14개 사업장 일괄), 갱신 근복, 사업장 소통·진행여부 확인 3건, 재검토 2건(새로운치과의원 등), 어드민 로직 수정 요청서 작성이며, 메일 초안·재검토 정리·개발자 요청서(직장복귀 대체인력 로직) 작성에 Claude가 쓰였을 개연성이 있음. [불확실] 업무일지 본문에 Claude 사용 명시는 없고 이 실행에서는 코워크 세션 목록 도구가 연결되지 않아 세션 대화 이력은 확인하지 못함. ※ 본 일지는 코워크 세션 + Notion 업무일지 기준이며, 사이드바 일반 채팅(표/…',tool:'Claude',score:4}
     ],
-  bestCaseRangeLabel: '9/28',
+  bestCaseRangeLabel: '9/29',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:27, weekEntries:4, daily:[
+    {team:'기업지원팀', total:11, avgRate:23, weekEntries:8, daily:[
       {dateStr:'2026-09-28', used:3, entries:4, rate:27, isFuture:false},
-      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-29', used:2, entries:4, rate:18, isFuture:false},
       {dateStr:'2026-09-30', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:30, weekEntries:6, daily:[
+    {team:'노무관리팀', total:10, avgRate:30, weekEntries:13, daily:[
       {dateStr:'2026-09-28', used:3, entries:6, rate:30, isFuture:false},
-      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-29', used:3, entries:7, rate:30, isFuture:false},
       {dateStr:'2026-09-30', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'HR사업본부', total:8, avgRate:13, weekEntries:3, daily:[
+    {team:'HR사업본부', total:8, avgRate:13, weekEntries:5, daily:[
       {dateStr:'2026-09-28', used:1, entries:3, rate:13, isFuture:false},
-      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-29', used:1, entries:2, rate:13, isFuture:false},
       {dateStr:'2026-09-30', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'경영지원팀', total:3, avgRate:0, weekEntries:0, daily:[
+    {team:'경영지원팀', total:3, avgRate:0, weekEntries:1, daily:[
       {dateStr:'2026-09-28', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-29', used:0, entries:1, rate:0, isFuture:false},
       {dateStr:'2026-09-30', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'대외협력팀', total:3, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-09-28', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-09-30', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'기금팀', total:1, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-09-28', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-09-29', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-09-30', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
