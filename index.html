@@ -852,11 +852,11 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
 <section class="card contract-card live-row" id="cardDual" aria-label="계약 체결 및 입금 완료 실시간 피드" style="grid-row:3;grid-column:1/3;">
   <div class="dual-feed">
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">3</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 5건 · 8월 15건 · 9월 3건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">1</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 5건 · 8월 15건 · 9월 3건 · 10월 1건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">69</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 306건 · 9월 69건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag today" style="margin-left:4px;font-size:10px;opacity:.85">전월</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">123</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 306건 · 9월 123건</span><span class="col-monthly-tail">2026년</span></div><div class="col-hint">이번 달(10월) 첫 입금 입력 대기 중 — 9월 입금 내역 표시</div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1060,9 +1060,7 @@ setTimeout(() => { updateDonut(); }, 600);
 
 /* ── FEEDS ── */
 const cHist=[
-  {team:"급여",co:"하*드*리*",cat:"신규",time:"9/14"},
-  {team:"법률",co:"블*터 앤 미*어",cat:"신규",time:"9/14"},
-  {team:"건설",co:"제*에*치*",cat:"신규",time:"9/5"}
+  {team:"법률",co:"(주) 해*종*건*사*무*",cat:"신규",time:"10/1"}
 ];
 const cMsgs=['고생하셨습니다!','축하합니다!','멋져요!','수고했어요!','잘했습니다!'];
 function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
@@ -1071,12 +1069,66 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
+  {co:'(주)훼*리*',amt:975200,time:'9/30'},
+  {co:'쁨*로*의*(*산*',amt:825000,time:'9/30'},
+  {co:'(주)문*지*어*',amt:88000,time:'9/30'},
+  {co:'(주)라*산*개*',amt:124850,time:'9/30'},
+  {co:'(주)은*에*지',amt:165000,time:'9/30'},
+  {co:'진*건*',amt:110000,time:'9/30'},
+  {co:'(주) 아*트*아',amt:220000,time:'9/30'},
+  {co:'주식회사 서*산*',amt:308000,time:'9/30'},
+  {co:'(주)에*플*스*축*사*소',amt:220000,time:'9/30'},
+  {co:'(주)백*씨*씨',amt:165000,time:'9/30'},
+  {co:'주식회사 삼*건*',amt:165000,time:'9/30'},
+  {co:'(주)한*종*건*',amt:93500,time:'9/30'},
+  {co:'(주)한*종*건*',amt:93500,time:'9/30'},
+  {co:'(주)준*건*',amt:66000,time:'9/30'},
+  {co:'서*현*병*',amt:330000,time:'9/30'},
+  {co:'쁨*로*의*(*동*',amt:3300000,time:'9/30'},
+  {co:'에*디*설 주*회*',amt:165000,time:'9/30'},
+  {co:'닥*함*과*원',amt:165000,time:'9/30'},
+  {co:'우*화*켐 주*회*',amt:187000,time:'9/30'},
+  {co:'쁨*로*의*(*남*',amt:1980000,time:'9/30'},
+  {co:'쁨*로*의*(*남*',amt:330000,time:'9/30'},
+  {co:'(주)라*산*개*',amt:124850,time:'9/30'},
+  {co:'(주) 서*이*씨',amt:165000,time:'9/30'},
+  {co:'(주)삼*씨*스*',amt:110000,time:'9/30'},
+  {co:'우*화*켐 주*회*',amt:165000,time:'9/30'},
+  {co:'(주)삼*씨*스*',amt:110000,time:'9/30'},
+  {co:'코*아*카* 주*회*',amt:165000,time:'9/30'},
+  {co:'(주)하*센*바*오',amt:110000,time:'9/30'},
+  {co:'주식회사 금*하*징',amt:165000,time:'9/30'},
+  {co:'(주)다*기*',amt:302500,time:'9/30'},
+  {co:'주식회사 미*디*인',amt:165000,time:'9/30'},
+  {co:'주식회사 제*제*앤*',amt:165000,time:'9/30'},
+  {co:'(주)문*지*어*',amt:88000,time:'9/30'},
+  {co:'아*본*활*학*병*',amt:550000,time:'9/30'},
+  {co:'의료법인 아*다*마*의*재*',amt:660000,time:'9/30'},
+  {co:'주식회사 우*종*건*',amt:220000,time:'9/30'},
+  {co:'주식회사 단*종*건*',amt:220000,time:'9/30'},
+  {co:'친*한*경*과*원',amt:165000,time:'9/30'},
+  {co:'계*종*건*',amt:165000,time:'9/30'},
+  {co:'레*트*원',amt:165000,time:'9/30'},
+  {co:'주식회사 주*',amt:165000,time:'9/30'},
+  {co:'주식회사 무*무*건*',amt:165000,time:'9/30'},
+  {co:'(주)준*건*',amt:66000,time:'9/30'},
+  {co:'백*개*(주)',amt:220000,time:'9/30'},
+  {co:'지*건*(주)',amt:330000,time:'9/30'},
+  {co:'(주)서*개*',amt:495000,time:'9/30'},
+  {co:'(주)서*기*',amt:165000,time:'9/30'},
+  {co:'(주)서*기*',amt:165000,time:'9/30'},
+  {co:'예*주*쁨*원*제*)',amt:275000,time:'9/30'},
   {co:'노*스*더*트*',amt:110000,time:'9/29'},
   {co:'노*스*러*',amt:110000,time:'9/29'},
   {co:'국*새*을*고',amt:1815000,time:'9/29'},
   {co:'(주)스*이*러*',amt:626000,time:'9/29'},
+  {co:'나*재*센*사*적*동*합',amt:594000,time:'9/29'},
+  {co:'형*갈*',amt:330000,time:'9/29'},
+  {co:'주식회사 상*에*앤*',amt:165000,time:'9/29'},
   {co:'(주)한*켐',amt:330000,time:'9/28'},
   {co:'하*요*병*',amt:2763700,time:'9/28'},
+  {co:'주식회사 지*스*',amt:110000,time:'9/28'},
+  {co:'유*건* 주*회*',amt:220000,time:'9/28'},
   {co:'시*마*설(주)',amt:330000,time:'9/23'},
   {co:'(주)케*피*운',amt:165000,time:'9/23'},
   {co:'(주)블*비*랩',amt:275000,time:'9/23'},
@@ -1173,16 +1225,17 @@ let AI_MVP_DATA = {
       {name:'권은정',team:'노무관리팀',date:'9/30',title:'[사실] 09-30 16:18 "6명 값 넣어줘 건강보험 퇴직정산, 고용보험 정산 외 다른건 건들이지 말고"…',body:'[사실] 대화 세션 4건(09-29 17:05, 09-30 09:09~09:55, 12:52~12:56, 15:12~16:21, 16:36), 사용자 발화 19턴(작업 알림 포함 원시 기록 기준). [사실] 도구 8종: PowerShell 29·Bash 25·Read 7·Edit 2·Grep 2·Write 1·TaskStop 1·ToolSearch 1. [사실] 지시 특징: 급여대장·변동사항통보서 경로를 @로 특정하고 "윤○○ 고용보험 정산 했던 것 처럼"으로 선례 방식을 지정, 마지막엔 "건강보험 퇴직정산, 고용보험 정산 외 다른…',tool:'Claude',score:8.2},
       {name:'김동우',team:'기업지원팀',date:'9/30',title:'[Claude Code] 서류요청포탈(WF C) 반려·승인 후 화면 복귀 오류 수정 세션. 질문: 검토화면에…',body:'[Claude Code] 서류요청포탈(WF C) 검토화면에서 반려·승인 후 화면이 잘못된 주소로 복귀하는 오류를 원인(상대경로 리다이렉트+307 상태코드) 특정 → 전체 도메인 주소로 고정하고 303으로 변경 → 운영 배포 → 승인 케이스 실행(157389)으로 정상 동작 직접 검증. 이어 반려를 되돌리는 \'검토취소\' 기능을 신규 설계·구현해 DB 트리거 기반 상태 복원까지 완성. [Claude Code] 임채(임금채권부담금)모듈 와이어프레임 v0.4 — 검토대상 페이지에 직전 3개년 기반 당해·향후년도 산출 로직 추가, 향후분…',tool:'Claude',score:8},
       {name:'김화영',team:'노무관리팀',date:'9/30',title:'[추측] 연차수당 법리 자문 — 2024 대법원 전원합의체 판결(고정성 요건 폐지)과 2025·2026 행정…',body:'[결론] 오늘(2026-09-30) 노무 자문(연차수당 법리) 관련 \'당일 활동 신호\'가 확인되어 AI 사용으로 기록함 — 단, 대화 원문 접근 불가로 세부는 추정 포함. [사실] 본 일지는 평일 17시(KST) 예약 클라우드 세션(사용자 PC 미연결)에서 자동 생성됨. 김화영님 당일 Claude 대화 트랜스크립트를 직접 조회하는 도구(list_sessions/read_transcript 등)는 이 환경에 미연동(연동: Notion·Slack·Gmail·Google Drive·공용 메모리뿐, 이들은 대화 원문을 노출하지 않음).…',tool:'Claude',score:7},
-      {name:'정보람',team:'기업지원팀',date:'9/30',title:'[추정] 세션 기록으로 확인 불가 — 업무일지 기반 추정. 지시: 새마을금고 육아기 근로시간 단축 확인서의…',body:'[사실] 이 실행 환경에서는 코워크 세션 조회 도구(session_info)를 쓸 수 없어 세션 기반 확인은 못 함(활용 0건 확인이 아님). [사실] 업무일지상 9/30 업무: 청진운수 산재근로자 대체인력지원금 보완서류 요청·회신·검토, 서평택새마을금고 육아기 근로시간 단축 확인서 변경 신고(팩스 발송), 케이이씨시스템 수임료 협의, JHD 청일도 서류 안내. [추정] 이 중 서류 검토·확인서 기간 정리·소통 내용 정리 등에 Claude가 쓰였을 개연성이 있으나 단정 불가. ※ 본 일지는 코워크 세션 + Notion 업무일지 기준…',tool:'Claude',score:5}
+      {name:'정보람',team:'기업지원팀',date:'9/30',title:'[추정] 세션 기록으로 확인 불가 — 업무일지 기반 추정. 지시: 새마을금고 육아기 근로시간 단축 확인서의…',body:'[사실] 이 실행 환경에서는 코워크 세션 조회 도구(session_info)를 쓸 수 없어 세션 기반 확인은 못 함(활용 0건 확인이 아님). [사실] 업무일지상 9/30 업무: 청진운수 산재근로자 대체인력지원금 보완서류 요청·회신·검토, 서평택새마을금고 육아기 근로시간 단축 확인서 변경 신고(팩스 발송), 케이이씨시스템 수임료 협의, JHD 청일도 서류 안내. [추정] 이 중 서류 검토·확인서 기간 정리·소통 내용 정리 등에 Claude가 쓰였을 개연성이 있으나 단정 불가. ※ 본 일지는 코워크 세션 + Notion 업무일지 기준…',tool:'Claude',score:5},
+      {name:'함지우',team:'기업지원팀',date:'9/30',title:'[불확실] 확정할 만한 단일 건을 특정하지 못함(근거 부족). 후보: \'4대보험 환급…',body:'[불확실] 확정할 만한 단일 건을 특정하지 못함(근거 부족). 후보: \'4대보험 환급 최종 검토일 1년 이상 경과 사업장 확인\' — 소멸시효와 연말정산 시기를 엮어 11월 접수 기한으로 연결한 판단이 실무적으로 의미 있으나, AI 사용 여부는 본문으로 확인되지 않음.',tool:'Claude',score:0},
     ],
   bestCaseRangeLabel: '9/30',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:30, weekEntries:13, daily:[
+    {team:'기업지원팀', total:11, avgRate:33, weekEntries:14, daily:[
       {dateStr:'2026-09-28', used:3, entries:4, rate:27, isFuture:false},
       {dateStr:'2026-09-29', used:4, entries:5, rate:36, isFuture:false},
-      {dateStr:'2026-09-30', used:3, entries:4, rate:27, isFuture:false},
+      {dateStr:'2026-09-30', used:4, entries:5, rate:36, isFuture:false},
       {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
@@ -3081,7 +3134,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=3,pmT=69,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=1,pmT=123,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
