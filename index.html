@@ -852,11 +852,11 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
 <section class="card contract-card live-row" id="cardDual" aria-label="계약 체결 및 입금 완료 실시간 피드" style="grid-row:3;grid-column:1/3;">
   <div class="dual-feed">
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">1</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 5건 · 8월 15건 · 9월 3건 · 10월 1건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">1</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 6건 · 8월 12건 · 9월 6건 · 10월 1건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag today" style="margin-left:4px;font-size:10px;opacity:.85">전월</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">123</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 306건 · 9월 123건</span><span class="col-monthly-tail">2026년</span></div><div class="col-hint">이번 달(10월) 첫 입금 입력 대기 중 — 9월 입금 내역 표시</div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">7</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 400건 · 10월 7건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1069,129 +1069,13 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
-  {co:'(주)훼*리*',amt:975200,time:'9/30'},
-  {co:'쁨*로*의*(*산*',amt:825000,time:'9/30'},
-  {co:'(주)문*지*어*',amt:88000,time:'9/30'},
-  {co:'(주)라*산*개*',amt:124850,time:'9/30'},
-  {co:'(주)은*에*지',amt:165000,time:'9/30'},
-  {co:'진*건*',amt:110000,time:'9/30'},
-  {co:'(주) 아*트*아',amt:220000,time:'9/30'},
-  {co:'주식회사 서*산*',amt:308000,time:'9/30'},
-  {co:'(주)에*플*스*축*사*소',amt:220000,time:'9/30'},
-  {co:'(주)백*씨*씨',amt:165000,time:'9/30'},
-  {co:'주식회사 삼*건*',amt:165000,time:'9/30'},
-  {co:'(주)한*종*건*',amt:93500,time:'9/30'},
-  {co:'(주)한*종*건*',amt:93500,time:'9/30'},
-  {co:'(주)준*건*',amt:66000,time:'9/30'},
-  {co:'서*현*병*',amt:330000,time:'9/30'},
-  {co:'쁨*로*의*(*동*',amt:3300000,time:'9/30'},
-  {co:'에*디*설 주*회*',amt:165000,time:'9/30'},
-  {co:'닥*함*과*원',amt:165000,time:'9/30'},
-  {co:'우*화*켐 주*회*',amt:187000,time:'9/30'},
-  {co:'쁨*로*의*(*남*',amt:1980000,time:'9/30'},
-  {co:'쁨*로*의*(*남*',amt:330000,time:'9/30'},
-  {co:'(주)라*산*개*',amt:124850,time:'9/30'},
-  {co:'(주) 서*이*씨',amt:165000,time:'9/30'},
-  {co:'(주)삼*씨*스*',amt:110000,time:'9/30'},
-  {co:'우*화*켐 주*회*',amt:165000,time:'9/30'},
-  {co:'(주)삼*씨*스*',amt:110000,time:'9/30'},
-  {co:'코*아*카* 주*회*',amt:165000,time:'9/30'},
-  {co:'(주)하*센*바*오',amt:110000,time:'9/30'},
-  {co:'주식회사 금*하*징',amt:165000,time:'9/30'},
-  {co:'(주)다*기*',amt:302500,time:'9/30'},
-  {co:'주식회사 미*디*인',amt:165000,time:'9/30'},
-  {co:'주식회사 제*제*앤*',amt:165000,time:'9/30'},
-  {co:'(주)문*지*어*',amt:88000,time:'9/30'},
-  {co:'아*본*활*학*병*',amt:550000,time:'9/30'},
-  {co:'의료법인 아*다*마*의*재*',amt:660000,time:'9/30'},
-  {co:'주식회사 우*종*건*',amt:220000,time:'9/30'},
-  {co:'주식회사 단*종*건*',amt:220000,time:'9/30'},
-  {co:'친*한*경*과*원',amt:165000,time:'9/30'},
-  {co:'계*종*건*',amt:165000,time:'9/30'},
-  {co:'레*트*원',amt:165000,time:'9/30'},
-  {co:'주식회사 주*',amt:165000,time:'9/30'},
-  {co:'주식회사 무*무*건*',amt:165000,time:'9/30'},
-  {co:'(주)준*건*',amt:66000,time:'9/30'},
-  {co:'백*개*(주)',amt:220000,time:'9/30'},
-  {co:'지*건*(주)',amt:330000,time:'9/30'},
-  {co:'(주)서*개*',amt:495000,time:'9/30'},
-  {co:'(주)서*기*',amt:165000,time:'9/30'},
-  {co:'(주)서*기*',amt:165000,time:'9/30'},
-  {co:'예*주*쁨*원*제*)',amt:275000,time:'9/30'},
-  {co:'노*스*더*트*',amt:110000,time:'9/29'},
-  {co:'노*스*러*',amt:110000,time:'9/29'},
-  {co:'국*새*을*고',amt:1815000,time:'9/29'},
-  {co:'(주)스*이*러*',amt:626000,time:'9/29'},
-  {co:'나*재*센*사*적*동*합',amt:594000,time:'9/29'},
-  {co:'형*갈*',amt:330000,time:'9/29'},
-  {co:'주식회사 상*에*앤*',amt:165000,time:'9/29'},
-  {co:'(주)한*켐',amt:330000,time:'9/28'},
-  {co:'하*요*병*',amt:2763700,time:'9/28'},
-  {co:'주식회사 지*스*',amt:110000,time:'9/28'},
-  {co:'유*건* 주*회*',amt:220000,time:'9/28'},
-  {co:'시*마*설(주)',amt:330000,time:'9/23'},
-  {co:'(주)케*피*운',amt:165000,time:'9/23'},
-  {co:'(주)블*비*랩',amt:275000,time:'9/23'},
-  {co:'주식회사 이*건*',amt:330000,time:'9/23'},
-  {co:'알*티*우*',amt:82500,time:'9/23'},
-  {co:'알*티*우*',amt:82500,time:'9/23'},
-  {co:'주식회사 비*지',amt:462000,time:'9/23'},
-  {co:'주식회사 이*디',amt:165000,time:'9/23'},
-  {co:'주식회사 거*엔*니*링',amt:165000,time:'9/23'},
-  {co:'예*원*부*',amt:165000,time:'9/23'},
-  {co:'주식회사아*튼',amt:330000,time:'9/23'},
-  {co:'(주)핸*',amt:2109800,time:'9/22'},
-  {co:'경*물*(주)',amt:8208200,time:'9/22'},
-  {co:'민*레*을(주)',amt:1188000,time:'9/22'},
-  {co:'당*새*을*고',amt:957000,time:'9/22'},
-  {co:'세*법* 베*',amt:866200,time:'9/21'},
-  {co:'화*요*원',amt:412500,time:'9/21'},
-  {co:'서*노*스*원',amt:1478600,time:'9/21'},
-  {co:'한*에*로*페*스',amt:2200000,time:'9/21'},
-  {co:'주식회사 신*물*',amt:110000,time:'9/21'},
-  {co:'로*배*설*',amt:220000,time:'9/18'},
-  {co:'광*신*협*조*',amt:220000,time:'9/18'},
-  {co:'김*중*새*을*고',amt:1782000,time:'9/17'},
-  {co:'가*트*원',amt:990000,time:'9/17'},
-  {co:'예*병*',amt:66000,time:'9/17'},
-  {co:'(주)맥*에*지*루*',amt:132000,time:'9/17'},
-  {co:'청*이*지',amt:198000,time:'9/17'},
-  {co:'(주)하*드*리*금*지*)',amt:682000,time:'9/17'},
-  {co:'한*일*트*',amt:110000,time:'9/17'},
-  {co:'주*회*민*크',amt:275000,time:'9/17'},
-  {co:'(주)케*퍼*트',amt:1443700,time:'9/16'},
-  {co:'중*수*성*가*인*지*터',amt:589200,time:'9/15'},
-  {co:'평*에*치*이*6*의*',amt:220000,time:'9/15'},
-  {co:'평*에*치*이*6*의*',amt:110000,time:'9/15'},
-  {co:'아*엠*러*',amt:110000,time:'9/14'},
-  {co:'삼*조*',amt:220000,time:'9/14'},
-  {co:'다*(주)',amt:165000,time:'9/14'},
-  {co:'주식회사 미*엔*테*먼*',amt:207900,time:'9/14'},
-  {co:'스*트*앙*설',amt:192500,time:'9/14'},
-  {co:'한*일*트*닉*',amt:110000,time:'9/14'},
-  {co:'(주)제*텍*바*오',amt:165000,time:'9/14'},
-  {co:'아*비*자*',amt:165000,time:'9/14'},
-  {co:'이*전*(주)',amt:220000,time:'9/14'},
-  {co:'(주)써*사*드*코*아',amt:275000,time:'9/14'},
-  {co:'(주)지*전*',amt:198000,time:'9/14'},
-  {co:'진*종*건*(주)',amt:242000,time:'9/14'},
-  {co:'주식회사 해*이*지',amt:275000,time:'9/14'},
-  {co:'비*종*건*',amt:242000,time:'9/14'},
-  {co:'(주)롤*롤',amt:6834200,time:'9/10'},
-  {co:'일*새*을*고',amt:2346100,time:'9/9'},
-  {co:'(주)올*마*팅*룹',amt:1435500,time:'9/9'},
-  {co:'(주)킴*텍',amt:396000,time:'9/9'},
-  {co:'농*회*법*(*)*신*프*',amt:322300,time:'9/9'},
-  {co:'로*배*설*',amt:275000,time:'9/9'},
-  {co:'(주)원*밀*디*인',amt:165000,time:'9/9'},
-  {co:'하*테*',amt:220000,time:'9/9'},
-  {co:'(주)원*건*',amt:165000,time:'9/9'},
-  {co:'희*병*',amt:396000,time:'9/7'},
-  {co:'다*비*(주)',amt:305200,time:'9/7'},
-  {co:'오*푸*셰*애*',amt:1100000,time:'9/3'},
-  {co:'인*건*(주)',amt:82500,time:'9/2'},
-  {co:'(주)미*광',amt:275000,time:'9/2'},
-  {co:'주식회사 해*에*디',amt:78760,time:'9/1'}
+  {co:'(주)킴*텍',amt:4042100,time:'10/1'},
+  {co:'(주)풍* 사*근*복*기* 강*료',amt:1320000,time:'10/1'},
+  {co:'(주)서*교*',amt:1188000,time:'10/1'},
+  {co:'(주)퓨*켐',amt:742500,time:'10/1'},
+  {co:'주식회사 제*종*건*',amt:275000,time:'10/1'},
+  {co:'호* 디*트*H*t*l T*e A*T*',amt:220000,time:'10/1'},
+  {co:'(주)백*개*',amt:99000,time:'10/1'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -1234,11 +1118,11 @@ let AI_MVP_DATA = {
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:32, weekEntries:17, daily:[
+    {team:'기업지원팀', total:11, avgRate:34, weekEntries:18, daily:[
       {dateStr:'2026-09-28', used:3, entries:4, rate:27, isFuture:false},
       {dateStr:'2026-09-29', used:4, entries:5, rate:36, isFuture:false},
       {dateStr:'2026-09-30', used:4, entries:5, rate:36, isFuture:false},
-      {dateStr:'2026-10-01', used:3, entries:3, rate:27, isFuture:false},
+      {dateStr:'2026-10-01', used:4, entries:4, rate:36, isFuture:false},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'노무관리팀', total:10, avgRate:30, weekEntries:26, daily:[
@@ -1255,11 +1139,11 @@ let AI_MVP_DATA = {
       {dateStr:'2026-10-01', used:1, entries:3, rate:13, isFuture:false},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'경영지원팀', total:3, avgRate:0, weekEntries:1, daily:[
+    {team:'경영지원팀', total:3, avgRate:0, weekEntries:2, daily:[
       {dateStr:'2026-09-28', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-09-29', used:0, entries:1, rate:0, isFuture:false},
       {dateStr:'2026-09-30', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-10-01', used:0, entries:0, rate:0, isFuture:false},
+      {dateStr:'2026-10-01', used:0, entries:1, rate:0, isFuture:false},
       {dateStr:'2026-10-02', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'대외협력팀', total:3, avgRate:0, weekEntries:0, daily:[
@@ -3136,7 +3020,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=1,pmT=123,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=1,pmT=7,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
