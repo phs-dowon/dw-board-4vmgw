@@ -856,7 +856,7 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">68</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 68건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">74</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 74건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1069,11 +1069,11 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
-  {co:'(주)세*인*라',amt:396000,time:'10/7'},
-  {co:'오*요*원',amt:126200,time:'10/7'},
-  {co:'부*남*새*을*고',amt:363000,time:'10/7'},
-  {co:'(의)나*의*재*',amt:2967100,time:'10/7'},
-  {co:'송*드*재*병*',amt:4536000,time:'10/7'}
+  {co:'하*테*',amt:220000,time:'10/12'},
+  {co:'세*이*에*',amt:1100000,time:'10/8'},
+  {co:'로*배*설*',amt:275000,time:'10/8'},
+  {co:'메*올',amt:220000,time:'10/8'},
+  {co:'(주)원*밀*디*인',amt:165000,time:'10/8'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -1103,9 +1103,15 @@ let AI_MVP_DATA = {
   ],
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
-      {name:'김동우',team:'기업지원팀',date:'10/9',title:'[Claude Code] 18:31 Notion Today-To-do 자동 기록 — 단일 프롬프트로 \'Cla…',body:'[Claude Code] NAS 감사 리포트 자동 배포: nas_audit 스크립트가 생성한 \'미발송\'·\'스레드\' 리포트 파일을 Claude Code가 그대로 읽어 슬랙 채널(C0BJSG3H49F)에 원문 그대로 전송(05:01, 2건) — 가공 없는 전달 자동화로 메시지 링크 회신까지 자동 완료. [Claude Code] 당일 세션 다이제스트 → 옵시디언 세션노트 변환: 그날 수행된 Claude Code 세션 요약(다이제스트)을 입력받아 지정 frontmatter 규격(유형/날짜/source/세션수/반영후보수/태그)에 맞춰 LLM…',tool:'Claude',score:5}
+      {name:'권은정',team:'노무관리팀',date:'10/8',title:'[사실] 10/8 14:55 "남○○ 24년 12월 급여 자료가 안남아있…',body:'[사실] 10/8 14:55 "남○○ 24년 12월 급여 자료가 안남아있다고 25년도 1월 급여랑 동일하다고 하거든? 그래서 일할계산해서 반영만 해놐는데 최종 확인 좀 해줘" [사실] AI가 일할계산(30/31)은 맞지만 2024년분이 월별지급내역 시트에만 있고 총액 셀 2곳에는 빠져 있다는 것을 찾았고, 전임 대장의 동일 사례(1/2 입사자 2명)로 일할…',tool:'Claude',score:8.8},
+      {name:'곽대영',team:'기업지원팀',date:'10/8',title:'[사실] 10-07 세 번째 요청 「6/19 메일 전후 최신형 차장의 업…',body:'[사실] 10-07 세 번째 요청 「6/19 메일 전후 최신형 차장의 업무진행 의사표현 전체 정리 + 전체 추가 진행 중단 발언 여부 + 별도 유선 안내 여부 확인」. 이미 아는 사실(9/17 2인 한정 중단)을 제외 범위로 지정해 질문을 좁힘. [사실] AI가 5/21~10/6 메일, STT DB, 연락일지, 업무일지를 시간순 표로 대조하고, 이후 사용자…',tool:'Claude',score:8},
+      {name:'김동우',team:'기업지원팀',date:'10/8',title:'[Claude Code] ERP 멀티세션 오케스트레이션 — 사람이 두 세…',body:'[Claude Code] ERP 멀티세션 오케스트레이션 — 사람이 두 세션을 직접 오가며 조율하지 않고, \'dowon-c8\' 세션이 완료한 A8 draft 업로드 결과를 본 세션이 cross-session 메시지로 수신해 ①노션 반영 확인 ②내부 대기목록 상태 전환 ③\'중복 금지\' 규칙의 메모리 고정까지 자동으로 마무리. 단순 질의응답이 아니라 두 AI 세…',tool:'Claude',score:8},
+      {name:'허혜진',team:'노무관리팀',date:'10/8',title:'[사실] 4대보험 자격취득/상실신고 DB 약 26건 이상을 하루에 일괄 …',body:'[사실] 4대보험 자격취득/상실신고 DB 약 26건 이상을 하루에 일괄 생성·수정 처리. [추측] 반복적 대량 입력·검증 업무에서 AI 활용도가 가장 높았을 것으로 추정.',tool:'Claude',score:7},
+      {name:'박혜빈',team:'노무관리팀',date:'10/8',title:'[사실] 연장·휴일 시간을 대조하다가 1.333h, 3.666h 같은 소…',body:'[사실] 연장·휴일 시간을 대조하다가 1.333h, 3.666h 같은 소수 입력이 대장에서 1.3h, 3.7h로 반올림되어 1인당 수백~천여 원씩 차이 나는 것을 찾았습니다(노태린, 김주희, 강다연, 김선진, 김유진). [의견] 97명 규모에서 눈으로 대조하면 놓치기 쉬운 단수 차이를 전수 재계산으로 잡아냈고, \'=14+50/60\'처럼 분 단위로 입력하는 …',tool:'Claude',score:7},
+      {name:'김화영',team:'노무관리팀',date:'10/8',title:'[추측] 위하고 급여 업로드 파일에서 \'숫자는 정상인데 한글(이름·부서)…',body:'[추측] 위하고 급여 업로드 파일에서 \'숫자는 정상인데 한글(이름·부서)만 깨지는\' 증상의 근본 원인을 openpyxl의 inlineStr 저장 방식(공유문자열 미사용)으로 특정하고, LibreOffice 재변환으로 sharedStrings 구조로 바꿔 해결한 대목. [의견] 단순 수식 수정이 아니라 \'xlsx 내부 문자열 저장 구조(inlineStr vs…',tool:'Claude',score:7},
+      {name:'이새봄',team:'HR사업본부',date:'10/8',title:'[추측] GS엠비즈 영업양수도 건 — 설명회 방침(서류 미배부·개별 면담…',body:'[추측] GS엠비즈 영업양수도 건 — 설명회 방침(서류 미배부·개별 면담 교부, 방어적 설명)을 정리하고 설명회 가이드·고용승계 서식 작성으로 연결한 흐름이 오늘 가장 깊은 활용으로 보임. [불확실] 어떤 근거(법령·판례)로 어디까지 도출했는지는 대화 원문 미확인으로 특정 불가(산출물 기반 재구성).',tool:'Claude',score:7}
     ],
-  bestCaseRangeLabel: '10/9',
+  bestCaseRangeLabel: '10/8',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
@@ -3011,7 +3017,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=1,pmT=68,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=1,pmT=74,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
