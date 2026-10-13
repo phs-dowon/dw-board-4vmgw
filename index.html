@@ -856,7 +856,7 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">74</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 74건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">99</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 99건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1070,10 +1070,10 @@ cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
   {co:'하*테*',amt:220000,time:'10/12'},
+  {co:'세*에*한*원',amt:1278400,time:'10/9'},
   {co:'세*이*에*',amt:1100000,time:'10/8'},
   {co:'로*배*설*',amt:275000,time:'10/8'},
-  {co:'메*올',amt:220000,time:'10/8'},
-  {co:'(주)원*밀*디*인',amt:165000,time:'10/8'}
+  {co:'메*올',amt:220000,time:'10/8'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -1108,14 +1108,15 @@ let AI_MVP_DATA = {
       {name:'권은정',team:'노무관리팀',date:'10/12',title:'[사실] 10-12 13:02 하이드로리튬 세션 발화: "안○○ 25년 10월 상여는 퇴사 직전 1년에 안겹…',body:'[사실] 대화 세션 5건(10-12 09:24~16:17), 사용자 발화 20턴(스킬 본문 자동삽입 2건 포함, 직접 입력 18턴). [사실] 도구 호출 12종: PowerShell 71·Bash 39·Edit 15·Write 10·Read 4·노션 fetch 4·법령조문 조회 4·노션 search 3·Skill 2·ToolSearch 2·노션 파일업로드 1·노션 페이지생성 1. [사실] 하이드로리튬·바래온은 retiree-severance-check 스킬로 처리했고, 작업 중 "스킬에 고용이랑 건강 같이 만들게 해줘"로 스킬 자체…',tool:'Claude',score:8.9},
       {name:'허혜진',team:'노무관리팀',date:'10/12',title:'[사실] (주)스킨엑스 건 — 성과급 반영 목표 실지급액이 되도록 기본급·연봉을 세후에서 역산하고, 건강보험…',body:'[사실] 확인된 산출물 — 3개 사업장 9월 급여대장, 퇴직연금(DC형) 추계 2건, 10월·퇴사자 급여 2건, (주)스킨엑스 실지급액·성과급 세후 역산 자료. [추측] 평소 AI로 처리하는 업무유형(급여대장 작성·검증, 퇴직연금 추계, 세후 역산·실지급액 산정)에 해당하여 계산·검산 과정에 AI 보조를 활용한 것으로 추정.',tool:'Claude',score:8},
       {name:'김동우',team:'기업지원팀',date:'10/12',title:'[Claude Code] 세션 7dd37d35 — "산재법 §75(직장복귀지원금)·지역고용촉진지원금·워라밸일…',body:'오늘은 Claude Code CLI 세션만 확인 가능했다(Cowork 세션 목록 조회 도구가 이 실행 환경에 없어 제외 — 아래 \'주의\' 참고). [Claude Code] 고용지원금 법령 대조 자동화(건수 최다, 약 25건): 정규직전환지원 참여요건·지원한도·제외근로자(고시 §5·§15·§16), 출산육아기 고용안정장려금 지급방식·신청기한·대체인력요건(시행령 §29, 시행규칙 §51), 고령자 계속고용장려금 제외근로자·중복지원 제한(고시 §6·§10), 지역고용촉진지원금 요건(시행령 §24), 두루누리 고용보험료 지원 요건(시행령…',tool:'Claude',score:7},
-      {name:'정보람',team:'기업지원팀',date:'10/12',title:'[추정] 영해새마을금고 지원금 견적서 작성·갱신 안내문 발송 건: 사업장 정보를 주고 안내문/견적 문구를 지…',body:'[사실] 수집된 코워크 세션 없음(세션 조회 도구 미연결). [추정] 업무일지상 10/12 처리 건: 영해새마을금고 견적서·갱신 안내문 발송, 예스365한방병원·큰사랑요양병원·삼양유통 출산육아기 지원금 서류 요청·재접수, 더조은플란트치과 서류 검토 등 — 안내문/메일 초안·서류 검토 보조에 Claude가 쓰였을 개연성 있음(단정 불가). ※ 본 일지는 코워크 세션 + Notion 업무일지 기준이며, 사이드바 일반 채팅(표/문서 작업 등)은 자동 수집되지 않아 누락될 수 있음.',tool:'Claude',score:6}
+      {name:'정보람',team:'기업지원팀',date:'10/12',title:'[추정] 영해새마을금고 지원금 견적서 작성·갱신 안내문 발송 건: 사업장 정보를 주고 안내문/견적 문구를 지…',body:'[사실] 수집된 코워크 세션 없음(세션 조회 도구 미연결). [추정] 업무일지상 10/12 처리 건: 영해새마을금고 견적서·갱신 안내문 발송, 예스365한방병원·큰사랑요양병원·삼양유통 출산육아기 지원금 서류 요청·재접수, 더조은플란트치과 서류 검토 등 — 안내문/메일 초안·서류 검토 보조에 Claude가 쓰였을 개연성 있음(단정 불가). ※ 본 일지는 코워크 세션 + Notion 업무일지 기준이며, 사이드바 일반 채팅(표/문서 작업 등)은 자동 수집되지 않아 누락될 수 있음.',tool:'Claude',score:6},
+      {name:'함지우',team:'기업지원팀',date:'10/12',title:'적용제외 결과보고서에서 재스크래핑 후 고지내역 확인 가능 기간이 누락 계…',body:'적용제외 결과보고서에서 재스크래핑 후 고지내역 확인 가능 기간이 누락 계산되는 오류를 발견하고, 보고서를 재생성해 금액이 맞는 것까지 검증한 건. 자동 산출물을 그대로 믿지 않고 결과 정합성을 점검해 원인(누락 기간 계산)을 특정했다는 점이 좋은 활용. 단, 본문 근거가 한 줄이라 위임 범위 설계 수준까지는 판단 보류.',tool:'Claude',score:0}
     ],
   bestCaseRangeLabel: '10/12',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:36, weekEntries:4, daily:[
-      {dateStr:'2026-10-12', used:4, entries:4, rate:36, isFuture:false},
+    {team:'기업지원팀', total:11, avgRate:45, weekEntries:5, daily:[
+      {dateStr:'2026-10-12', used:5, entries:5, rate:45, isFuture:false},
       {dateStr:'2026-10-13', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-14', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-15', used:0, entries:0, rate:0, isFuture:true},
@@ -3016,7 +3017,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=1,pmT=74,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=1,pmT=99,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
