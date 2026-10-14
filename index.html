@@ -856,7 +856,7 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">99</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 99건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">108</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 108건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1069,11 +1069,11 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
-  {co:'하*테*',amt:220000,time:'10/12'},
-  {co:'세*에*한*원',amt:1278400,time:'10/9'},
-  {co:'세*이*에*',amt:1100000,time:'10/8'},
-  {co:'로*배*설*',amt:275000,time:'10/8'},
-  {co:'메*올',amt:220000,time:'10/8'}
+  {co:'양*분*부*과',amt:1188000,time:'10/13'},
+  {co:'코*아*카*(주)',amt:1925000,time:'10/12'},
+  {co:'(주)의*건*',amt:1650000,time:'10/12'},
+  {co:'성*실*양*',amt:495000,time:'10/12'},
+  {co:'해*비*의*과',amt:308000,time:'10/12'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -1105,6 +1105,7 @@ let AI_MVP_DATA = {
   bestCases: [
       {name:'권은정',team:'노무관리팀',date:'10/13',title:'[사실] 16:14 발화: "그리고 정산 금액도 넣어줘. 7번 차감징수세액으로 넣어주면 되고, 보수총액 10…',body:'[사실] 대화 세션 3건(11:28 / 13:06~16:14 / 16:46~17:07), 사용자 발화 27턴(이미지 첨부 9건 포함). [사실] 도구 사용: PowerShell 70·Read 64·슬랙 검색/조회 27·Write 16·Bash 16·Edit 7·Grep 7·법령·행정규칙 조회 6·노션 7·지메일 1·웹검색 1 등 20종 이상. [사실] 지시 방식: 대상 파일을 @경로로 지정하고, 메일 형식 예시를 붙여넣어 출력 형식을 고정했으며, 사업장 회신(통근수당 비과세 처리)을 조건으로 추가해 재산정시킴. [추측] 해당 AI…',tool:'Claude',score:8.9},
       {name:'김화영',team:'노무관리팀',date:'10/13',title:'4대보험 취득/상실신고를 단건 질의가 아니라 \'Drive 소싱 → 분석 → DB정렬 검토표 생성 → 검토 후…',body:'① 4대보험 취득/상실신고 자동화 봇 프롬프트 설계 — Google Drive 급여대장·근태자료 소싱 → 분석 → Notion 취득/상실신고 DB 정렬 검토표 → 검토 후 입력까지의 에이전틱 워크플로우 구성. 쁨글로벌의원 명동점 직종부호 매핑(데스크 029/피부·체형관리 511/의사 301/코디 013), 보수월액=과세금액(비과세 식대 제외) 기준, 취득·상실 양식 작성기준 정리. ② 월 급여마감 검토 — 드림슐레(당월 귀속분·일용직 4대보험 요율처리·사업소득→근로 전환 직원), 쁨글로벌의원 명동점(양도양수 정산·복직자 재직일수 일…',tool:'Claude',score:8.5},
+      {name:'함지우',team:'기업지원팀',date:'10/13',title:'재스크래핑 후 보고서를 재생성해 고지내역 확인 가능 기간 누락으로 인한 금액 오류를 바로잡…',body:'재스크래핑 후 보고서를 재생성해 고지내역 확인 가능 기간 누락으로 인한 금액 오류를 바로잡은 건. 오류 원인을 데이터 수집 단계(스크래핑 범위)에서 찾아 수동 보정이 아니라 파이프라인을 다시 돌려 해결했고, 결과(금액 일치)로 검증까지 마쳤다. 대시보드 점검 중 노션 체크 오류도 함께 발견·수정해 산출물 간 정합성을 확인한 점이 좋다.',tool:'Claude',score:8},
       {name:'허혜진',team:'노무관리팀',date:'10/13',title:'[사실] 노션 취득/상실신고 DB 당일 14건 일괄 생성·정리. [추측] 여러 사업장의 신고 대상자 정보를…',body:'[사실] 노션 취득/상실신고 DB 14건 신규 생성, (주)바래온 9월 급여대장 일용직 반영 수정본 등 급여대장 작성·수정 산출물 확인. [추측] 복수 사업장 신고 대상자 정보 정리·입력 및 급여대장 작성·검증 과정에서 AI 보조를 활용한 것으로 추정.',tool:'Claude',score:7},
       {name:'정보람',team:'기업지원팀',date:'10/13',title:'[추측] 지시: 더조은플란트치과의원 대량이체확인증에서 정현지님 내역만 추출해 새 이체확인증 생성 → 결과물:…',body:'[사실] 이번 자동 실행에서 코워크 세션 조회 도구(session_info)가 노출되지 않아 코워크 세션 내역은 확인하지 못함. [사실] Notion 업무일지 기준 오늘 업무: 더조은플란트치과의원(정규직 전환 가입확인서 8명 작성, 정현지님 이체확인증 대량이체 추출·신규 생성), 제이에이치디 보완서류 제출, 중림.만리새마을금고 출산육아기 서류 검토, 이화수로요양병원 청일도 대상자 확인 요청. [추측] 이체확인증 추출·확인서 작성·서류 검토 등 정형 서류 작업에 Claude(이체확인증 스킬 등)가 쓰였을 개연성은 있으나 단정 불가.…',tool:'Claude',score:5},
       {name:'김동우',team:'기업지원팀',date:'10/13',title:'[사실] 업무일지 자동화 파이프라인(세션 22e81d8c 등)이 CC 세션 다이제스트와 노션 진행상황·자료요…',body:'[사실] 오늘(2026-10-13, KST) 확인된 세션은 Claude Code 6건뿐이며 전부 사전 구축된 자동화의 정기 실행이다. [Claude Code] ① 업무일지 자동화(세션 22e81d8c·75ec4acd·9e34f73e): CC 세션 다이제스트+노션 [업무]진행상황·자료요청관리·통화기록 4종을 종합해 노션 \'Today To-do\' DB에 업무일지 항목을 자동 생성(각 1~2건 CREATED). ② 옵시디언 세션노트 자동생성(세션 2049de08): 오늘자 CC 세션 다이제스트를 바탕으로 볼트용 마크다운 노트를 작성 —…',tool:'Claude',score:4}
@@ -1113,9 +1114,9 @@ let AI_MVP_DATA = {
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:32, weekEntries:10, daily:[
+    {team:'기업지원팀', total:11, avgRate:36, weekEntries:11, daily:[
       {dateStr:'2026-10-12', used:5, entries:6, rate:45, isFuture:false},
-      {dateStr:'2026-10-13', used:2, entries:4, rate:18, isFuture:false},
+      {dateStr:'2026-10-13', used:3, entries:5, rate:27, isFuture:false},
       {dateStr:'2026-10-14', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-15', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-16', used:0, entries:0, rate:0, isFuture:true}
@@ -3015,7 +3016,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=1,pmT=99,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=1,pmT=108,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
