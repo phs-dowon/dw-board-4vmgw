@@ -16,6 +16,7 @@
   --ink:#14161c; --ink-2:#4b5164; --muted:#6b7183;
   --t1:#2a78d6; --t2:#eb6834; --t3:#1baf7a; --t4:#c98a00;
   --t1-soft:#eaf2fc; --t2-soft:#fdf0ea; --t3-soft:#e8f7f1; --t4-soft:#fbf4e3;
+  --t5:#7c4dd6; --t5-soft:#f2edfc; --red:#c62828; --red-soft:#fdecec; --gray-soft:#eef0f4;
   --code-bg:#f1f3f8;
   --r:14px;
 }
@@ -26,6 +27,7 @@
     --ink:#eceff5; --ink-2:#b4bccb; --muted:#8c94a6;
     --t1:#6aa5f0; --t2:#f3906a; --t3:#4fd0a0; --t4:#f0c048;
     --t1-soft:rgba(106,165,240,.14); --t2-soft:rgba(243,144,106,.14); --t3-soft:rgba(79,208,160,.14); --t4-soft:rgba(240,192,72,.14);
+    --t5:#b39af0; --t5-soft:rgba(179,154,240,.15); --red:#f08080; --red-soft:rgba(240,128,128,.15); --gray-soft:rgba(219,229,255,.08);
     --code-bg:#1f2430;
   }
 }
@@ -35,6 +37,7 @@
   --ink:#eceff5; --ink-2:#b4bccb; --muted:#8c94a6;
   --t1:#6aa5f0; --t2:#f3906a; --t3:#4fd0a0; --t4:#f0c048;
   --t1-soft:rgba(106,165,240,.14); --t2-soft:rgba(243,144,106,.14); --t3-soft:rgba(79,208,160,.14); --t4-soft:rgba(240,192,72,.14);
+  --t5:#b39af0; --t5-soft:rgba(179,154,240,.15); --red:#f08080; --red-soft:rgba(240,128,128,.15); --gray-soft:rgba(219,229,255,.08);
   --code-bg:#1f2430;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -61,9 +64,9 @@ section{display:none}
 section.on{display:block}
 .grid{display:grid;gap:14px}
 .g2{grid-template-columns:repeat(2,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g2{grid-template-columns:1fr}}
-@media(max-width:600px){.g4{grid-template-columns:1fr}main{padding:20px 16px 60px}.hdr{padding:22px 16px 0}}
+.g4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+@media(max-width:900px){.g2{grid-template-columns:1fr}}
+@media(max-width:600px){main{padding:20px 16px 60px}.hdr{padding:22px 16px 0}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
 .sec-t{font-size:17px;font-weight:800;color:var(--navy);margin:32px 0 4px;letter-spacing:-.01em}
 .sec-t:first-child{margin-top:0}
@@ -124,6 +127,32 @@ details{background:var(--card);border:1px solid var(--line);border-radius:12px;p
 summary{font-weight:700;color:var(--navy);cursor:pointer}
 details p{color:var(--ink-2);font-size:13.5px;margin-top:8px}
 
+/* promo */
+.pv{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;background:var(--t5-soft);color:var(--t5);border-radius:6px;padding:2px 8px;vertical-align:3px;margin-left:6px}
+.pv-tab{background:rgba(255,255,255,.14);color:#e2d6ff}
+.tab.on .pv-tab{background:var(--t5-soft);color:var(--t5)}
+.note{background:var(--t5-soft);border-radius:12px;padding:12px 16px;font-size:13px;color:var(--ink-2);margin-bottom:14px}
+.ctl{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin-bottom:14px}
+.ctl label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px}
+.seg button{background:none;border:none;border-radius:7px;padding:6px 12px;color:var(--ink-2);font-weight:600;font-size:13px}
+.seg button.on{background:var(--blue);color:#fff}
+.ctl input{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:7px 10px;color:var(--ink)}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi b{display:block;font-size:24px;color:var(--navy);letter-spacing:-.02em}
+.kpi span{font-size:12px;color:var(--muted)}
+.st-b{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.s-now{background:var(--t2-soft);color:var(--t2)}
+.s-hot{background:var(--red-soft);color:var(--red)}
+.s-soon{background:var(--t1-soft);color:var(--t1)}
+.s-wait{background:var(--t4-soft);color:var(--t4)}
+.s-done{background:var(--gray-soft);color:var(--muted)}
+#promoBody tr{cursor:pointer}
+#promoBody tr:hover td{background:var(--line-soft)}
+#promoBody tr.sel td{background:var(--blue-soft)}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.warn{color:var(--t4);font-size:11.5px;display:block}
 .foot{color:var(--muted);font-size:12px;text-align:center;margin-top:40px}
 .foot a{color:var(--blue)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#14161c;color:#fff;border-radius:999px;padding:8px 18px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
@@ -145,6 +174,7 @@ details p{color:var(--ink-2);font-size:13.5px;margin-top:8px}
       <button class="tab on" data-tab="home" role="tab">개요</button>
       <button class="tab" data-tab="skills" role="tab">업무별 가이드</button>
       <button class="tab" data-tab="builder" role="tab">요청 만들기</button>
+      <button class="tab" data-tab="promo" role="tab">연차 촉진 <span class="pv pv-tab">미리보기</span></button>
       <button class="tab" data-tab="rules" role="tab">처리 규칙</button>
       <button class="tab" data-tab="faq" role="tab">FAQ</button>
     </nav>
@@ -212,6 +242,33 @@ details p{color:var(--ink-2);font-size:13.5px;margin-top:8px}
         <div class="out" id="bOut"></div>
         <p class="small mut" style="margin-top:10px" id="bHint"></p>
       </div>
+    </div>
+  </section>
+
+  <!-- 연차 촉진 (미리보기) -->
+  <section id="promo">
+    <h2 class="sec-t">연차 사용 촉진 <span class="pv">미리보기</span></h2>
+    <p class="sec-d">근로기준법 제61조의 촉진 기한을 직원별로 계산하고, 지금 보내야 할 통지서 초안을 만듭니다.</p>
+    <div class="note"><b>예시 데이터입니다.</b> 실제로 연동하면 노션 '연차 현황(2026)'의 입사일과 '유급 휴가 사용 리스트'의 사용 일수를 읽어 이 표를 채웁니다. 기준일을 바꿔 보면 상태가 어떻게 달라지는지 확인할 수 있습니다.</div>
+    <div class="ctl">
+      <div><label>연차 산정 기준</label><div class="seg" id="basis"><button data-b="hire" class="on">입사일 기준</button><button data-b="fiscal">회계연도 기준</button></div></div>
+      <div><label for="today">기준일</label><input type="date" id="today"></div>
+    </div>
+    <div class="kpi" id="kpi"></div>
+    <div class="card tw">
+      <table>
+        <thead><tr><th>이름</th><th>입사일</th><th>사용 기간</th><th class="num">발생</th><th class="num">사용</th><th class="num">잔여</th><th>1차 촉구 (10일 이내)</th><th>2차 지정 통보 기한</th><th>상태</th></tr></thead>
+        <tbody id="promoBody"></tbody>
+      </table>
+    </div>
+    <h2 class="sec-t">통지서 초안</h2>
+    <p class="sec-d">표에서 직원을 누르면 지금 단계에 맞는 통지서가 나옵니다. 실제 운영 시에는 Gmail 초안으로 저장하고, 발송은 담당자가 확인 후 진행합니다.</p>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:10px">
+        <b style="color:var(--navy)" id="docTitle"></b>
+        <button class="btn" id="docCopy">복사</button>
+      </div>
+      <div class="out" id="docOut"></div>
     </div>
   </section>
 
@@ -298,6 +355,8 @@ const RULES=[
   ['연차·반차','승인완료·수식 컬럼은 수정하지 않음','결재 기록과 자동 계산 보존'],
   ['이력서','새 행을 만들지 않고 기존 행만 업데이트','메일 알림으로 행이 이미 생성되어 있음'],
   ['이력서','중복 행은 오래된 행 유지, 나머지 ⬜ 표시','원본 이력 보존'],
+  ['연차 촉진','통지서는 초안까지만 만들고 발송은 담당자 확인 후','법적 효력이 있는 서면 통지이므로'],
+  ['연차 촉진','1년 미만 직원은 제61조 제2항 기한(3개월·1개월 전) 적용','1년 이상 직원(6개월·2개월 전)과 기한이 다름'],
 ];
 
 const $=s=>document.querySelector(s);
@@ -324,6 +383,15 @@ $('#skillCards').innerHTML=SKILLS.map(s=>`
     <button data-go="${s.id}">자세히 보기 →</button>
     <div class="to">${s.to}</div>
   </div>`).join('');
+$('#skillCards').insertAdjacentHTML('beforeend',`
+  <div class="card sk" style="--c:var(--t5);--cs:var(--t5-soft)">
+    <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg></div>
+    <h3>연차 사용 촉진 <span class="pv" style="margin-left:2px">미리보기</span></h3>
+    <p>촉진 기한을 직원별로 계산하고 1·2차 통지서 초안을 만듭니다.</p>
+    <button data-tab-go="promo">미리보기 열기 →</button>
+    <div class="to">Notion 연차 현황 → Calendar · Gmail 초안</div>
+  </div>`);
+document.querySelector('[data-tab-go]').onclick=()=>showTab('promo');
 document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{showTab('skills');pick(b.dataset.go)});
 
 // 업무별 가이드
@@ -367,8 +435,91 @@ $('#bTask').onchange=renderFields;
 $('#bCopy').onclick=()=>copy($('#bCopy').dataset.text);
 renderFields();
 
+// 연차 촉진 (미리보기) — 예시 데이터
+const STAFF=[
+  {name:'김예시',join:'2020-01-01',used:9},
+  {name:'이예시',join:'2023-04-20',used:6},
+  {name:'박예시',join:'2025-03-02',used:4},
+  {name:'최예시',join:'2026-01-19',used:2},
+  {name:'정예시',join:'2026-03-16',used:1},
+];
+const D=s=>{const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)};
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const kd=d=>`${d.getFullYear()}.${d.getMonth()+1}.${d.getDate()}`;
+const md=d=>`${d.getMonth()+1}/${d.getDate()}`;
+const addM=(d,n)=>{const r=new Date(d);const day=r.getDate();r.setDate(1);r.setMonth(r.getMonth()+n);r.setDate(Math.min(day,new Date(r.getFullYear(),r.getMonth()+1,0).getDate()));return r};
+const addD=(d,n)=>{const r=new Date(d);r.setDate(r.getDate()+n);return r};
+const yrs=(j,at)=>{let y=at.getFullYear()-j.getFullYear();if(addM(j,12*y)>at)y--;return y};
+const days=(a,b)=>Math.round((b-a)/864e5);
+
+function calc(p,t,basis){
+  const j=D(p.join);const firstEnd=addM(j,12);
+  if(t<firstEnd){ // 1년 미만: 제61조 제2항 (매월 개근 시 1일, 최대 11일)
+    let m=0;while(m<11&&addM(j,m+1)<=t)m++;
+    return {start:j,end:addD(firstEnd,-1),gen:m,under:true,
+      w1:addM(firstEnd,-3),d2:addD(addM(firstEnd,-1),-1)};
+  }
+  let start,end,gen,flag='';
+  if(basis==='fiscal'){
+    start=new Date(t.getFullYear(),0,1);end=new Date(t.getFullYear(),11,31);
+    const y=yrs(j,start);
+    if(y<1){gen=null;flag='입사 다음 해 비례 산정 — 노무 검토 필요'}
+    else gen=Math.min(25,15+Math.floor((y-1)/2));
+  }else{
+    const y=yrs(j,t);start=addM(j,12*y);end=addD(addM(j,12*(y+1)),-1);
+    gen=Math.min(25,15+Math.floor((y-1)/2));
+  }
+  const next=addD(end,1);
+  return {start,end,gen,flag,under:false,w1:addM(next,-6),d2:addD(addM(next,-2),-1)};
+}
+function status(c,t){
+  const w1e=addD(c.w1,9);
+  if(t<c.w1)return{k:'s-soon',l:`1차 예정 D-${days(t,c.w1)}`,stage:1};
+  if(t<=w1e)return{k:'s-now',l:`1차 촉구 중 (~${md(w1e)})`,stage:1};
+  if(t<=c.d2){const n=days(t,c.d2);return{k:n<=14?'s-hot':'s-wait',l:`2차 통보 D-${n}`,stage:2}}
+  return{k:'s-done',l:'촉진 기한 지남',stage:0};
+}
+function notice(p,c,stage,t){
+  const left=c.gen==null?'(비례 산정 후 기재)':Math.max(0,c.gen-p.used);
+  const gen=c.gen==null?'(검토 필요)':c.gen;
+  const head=`연차휴가 사용 기간: ${kd(c.start)} ~ ${kd(c.end)}\n발생 ${gen}일 / 사용 ${p.used}일 / 미사용 ${left}일`;
+  const law=c.under?'근로기준법 제61조 제2항':'근로기준법 제61조 제1항';
+  if(stage===2) return `[연차휴가 사용 시기 지정 통보 (2차)]\n\n${p.name} 님\n\n${law}에 따라 1차 사용 촉구 후 10일 이내에 사용 시기를 알려주지 않으셨으므로, 회사가 미사용 연차휴가의 사용 시기를 아래와 같이 지정하여 통보합니다.\n\n${head}\n지정 사용일: (담당자 지정 — ${kd(c.d2)}까지 통보)\n\n지정된 날에 출근하여 근무하시는 경우, 회사는 노무 수령을 거부하며 해당 일은 연차휴가를 사용한 것으로 봅니다.\n\n${kd(t)}\n노무법인 도원`;
+  return `[연차휴가 사용 촉구 (1차)]\n\n${p.name} 님\n\n${law}에 따라 아래와 같이 미사용 연차휴가 일수를 알려드립니다.\n\n${head}\n\n이 통지를 받은 날부터 10일 이내에 미사용 연차휴가의 사용 시기를 정하여 회사에 서면으로 알려주시기 바랍니다. 기한 내에 알려주지 않으시면 회사가 사용 시기를 지정하여 ${kd(c.d2)}까지 통보합니다.\n\n${kd(t)}\n노무법인 도원`;
+}
+let basis='hire',selName=null;
+$('#today').value=iso(new Date());
+function renderPromo(){
+  const t=D($('#today').value||iso(new Date()));
+  const rows=STAFF.map(p=>{const c=calc(p,t,basis);return{p,c,s:status(c,t)}});
+  const cnt=k=>rows.filter(r=>r.s.k===k).length;
+  $('#kpi').innerHTML=`
+    <div><b>${cnt('s-now')}</b><span>지금 1차 촉구할 사람</span></div>
+    <div><b>${cnt('s-hot')}</b><span>2주 안에 2차 통보 기한</span></div>
+    <div><b>${cnt('s-soon')}</b><span>1차 촉구 예정</span></div>
+    <div><b>${rows.reduce((a,r)=>a+(r.c.gen==null?0:Math.max(0,r.c.gen-r.p.used)),0)}일</b><span>전체 미사용 연차</span></div>`;
+  $('#promoBody').innerHTML=rows.map(({p,c,s})=>`<tr data-n="${p.name}">
+    <td><b>${p.name}</b>${c.under?'<span class="warn">1년 미만 (제2항)</span>':''}${c.flag?`<span class="warn">${c.flag}</span>`:''}</td>
+    <td>${kd(D(p.join))}</td><td class="small">${kd(c.start)} ~ ${kd(c.end)}</td>
+    <td class="num">${c.gen??'–'}</td><td class="num">${p.used}</td><td class="num"><b>${c.gen==null?'–':Math.max(0,c.gen-p.used)}</b></td>
+    <td>${kd(c.w1)} ~ ${md(addD(c.w1,9))}</td><td>${kd(c.d2)}까지</td>
+    <td><span class="st-b ${s.k}">${s.l}</span></td></tr>`).join('');
+  $('#promoBody').querySelectorAll('tr').forEach(tr=>tr.onclick=()=>{selName=tr.dataset.n;renderPromo()});
+  const order=['s-now','s-hot','s-wait','s-soon','s-done'];
+  const r=rows.find(r=>r.p.name===selName)||[...rows].sort((a,b)=>order.indexOf(a.s.k)-order.indexOf(b.s.k))[0];
+  selName=r.p.name;
+  $('#promoBody').querySelectorAll('tr').forEach(tr=>tr.classList.toggle('sel',tr.dataset.n===selName));
+  const stage=r.s.stage||2;
+  $('#docTitle').textContent=`${r.p.name} — ${stage===1?'1차 사용 촉구':'2차 사용 시기 지정 통보'}${r.s.stage===0?' (기한 지남, 참고용)':''}`;
+  $('#docOut').textContent=notice(r.p,r.c,stage,t);
+}
+document.querySelectorAll('#basis button').forEach(b=>b.onclick=()=>{basis=b.dataset.b;document.querySelectorAll('#basis button').forEach(x=>x.classList.toggle('on',x===b));renderPromo()});
+$('#today').oninput=renderPromo;
+$('#docCopy').onclick=()=>copy($('#docOut').textContent);
+renderPromo();
+
 // 처리 규칙
-const RC={'입사·생일':'t1','연차·반차':'t3','이력서':'t2'};
+const RC={'입사·생일':'t1','연차·반차':'t3','이력서':'t2','연차 촉진':'t5'};
 $('#rulesBody').innerHTML=RULES.map(([a,b,c])=>`<tr><td><span class="tag" style="--c:var(--${RC[a]});--cs:var(--${RC[a]}-soft)">${a}</span></td><td><b>${b}</b></td><td class="mut">${c}</td></tr>`).join('');
 
 try{const t=localStorage.getItem('hrAgentTab');if(t&&document.getElementById(t))showTab(t)}catch(e){}
