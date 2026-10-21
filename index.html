@@ -852,11 +852,11 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
 <section class="card contract-card live-row" id="cardDual" aria-label="계약 체결 및 입금 완료 실시간 피드" style="grid-row:3;grid-column:1/3;">
   <div class="dual-feed">
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">1</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 6건 · 8월 12건 · 9월 8건 · 10월 1건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">2</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 6건 · 8월 12건 · 9월 8건 · 10월 2건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">173</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 173건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">179</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 179건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1060,6 +1060,7 @@ setTimeout(() => { updateDonut(); }, 600);
 
 /* ── FEEDS ── */
 const cHist=[
+  {team:"급여",co:"(주)웍*메*트",cat:"신규",time:"10/20"},
   {team:"법률",co:"(주) 해*종*건*사*무*",cat:"신규",time:"10/1"}
 ];
 const cMsgs=['고생하셨습니다!','축하합니다!','멋져요!','수고했어요!','잘했습니다!'];
@@ -1069,11 +1070,11 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
+  {co:'(주)세*주* 본*',amt:198000,time:'10/19'},
   {co:'노*요*원*원',amt:594000,time:'10/19'},
+  {co:'와*제*비*후*리*',amt:594000,time:'10/19'},
   {co:'대*온*리*애*협*',amt:1980000,time:'10/19'},
-  {co:'주식회사 해*에*디',amt:309980,time:'10/19'},
-  {co:'주식회사 해*에*디',amt:294800,time:'10/19'},
-  {co:'가*트*원',amt:2640000,time:'10/16'}
+  {co:'주식회사 해*에*디',amt:309980,time:'10/19'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -3018,7 +3019,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=1,pmT=173,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=2,pmT=179,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
