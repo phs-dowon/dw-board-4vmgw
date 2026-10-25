@@ -852,11 +852,11 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
 <section class="card contract-card live-row" id="cardDual" aria-label="계약 체결 및 입금 완료 실시간 피드" style="grid-row:3;grid-column:1/3;">
   <div class="dual-feed">
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">2</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 6건 · 8월 12건 · 9월 8건 · 10월 2건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">3</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 6건 · 8월 12건 · 9월 8건 · 10월 3건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">211</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 211건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">243</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 243건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1061,6 +1061,7 @@ setTimeout(() => { updateDonut(); }, 600);
 /* ── FEEDS ── */
 const cHist=[
   {team:"급여",co:"(주)웍*메*트",cat:"신규",time:"10/20"},
+  {team:"HR",co:"신*건*(주)",cat:"신규",time:"10/15"},
   {team:"법률",co:"(주) 해*종*건*사*무*",cat:"신규",time:"10/1"}
 ];
 const cMsgs=['고생하셨습니다!','축하합니다!','멋져요!','수고했어요!','잘했습니다!'];
@@ -1070,11 +1071,11 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
-  {co:'영*·*암*마*금*',amt:957000,time:'10/21'},
-  {co:'수*미*산*인*',amt:495000,time:'10/21'},
-  {co:'대*소*(주)',amt:693000,time:'10/21'},
-  {co:'경*렌*카(주)',amt:198000,time:'10/21'},
-  {co:'로*배*설*',amt:226600,time:'10/21'}
+  {co:'오*한*병*',amt:843700,time:'10/23'},
+  {co:'대*신*협*조*',amt:165000,time:'10/23'},
+  {co:'예*원*부*',amt:165000,time:'10/22'},
+  {co:'알*티*우*',amt:82500,time:'10/22'},
+  {co:'(주)블*비*랩',amt:275000,time:'10/22'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -1108,6 +1109,7 @@ let AI_MVP_DATA = {
       {name:'박혜빈',team:'노무관리팀',date:'10/22',title:'[사실] 웍스메이트 정산 누락 건이다. "전년 정산이 또 안 불러와진다"는 질문에 AI가 먼저 원인을 구분했…',body:'[사실] 오늘 활동이 확인된 세션은 2건이다(Claude Code, 세션 원문 확인). ① 건강보험/국민연금 고지서 정리(10/20부터 이어진 세션) - 개별 사업장 9곳의 접수 폴더 고지서와 작업파일 고지내역을 한 칸씩 대조했다(불일치 0). 제이텍스바이오 6명의 공제액이 10월 고지서와 1원 단위까지 일치함을 표로 확인했다. - 알씨에스컴퍼니와 로우커피스탠드 강남·성수3호점·을지로·네이버점의 10월 작업본을 만들고 고지내역을 붙여넣었다. 국민연금 소급분, 퇴사자 정산, 고지 누락자 같은 확인 필요 항목을 뽑아냈다. - Chrom…',tool:'Claude',score:9},
       {name:'곽대영',team:'기업지원팀',date:'10/22',title:'[사실] 억조1978 임은숙 급여 기준 고령자고용지원금 산정. 25년 3·4분기 접수내역 캡처를 올려 산식(…',body:'[사실] 직접 연 대화 2건, 질문 약 6회(자동 스케줄 Gmail 회신 추적·오늘 상태판 제외). 1) 김포농업협동조합 고용지원금·4대보험 환급 검토 안내자료(Claude Docs) — 노션 사업장DB·통합DB + 도원 어드민 데이터 뷰어 조회 + 법령 검색으로 초안 작성 → 고객 발송용(PDF 내보내기)으로 표 중심 재구성. 결과: 출산육아기 약 1,290만 원 + 2023년도 임금채권부담금 경감 약 278만 원, 합계 약 1,568만 원. 지급 합계 93,430,360원 역산 일치 확인. dowon-skill·dowon-adm…',tool:'Claude',score:8},
       {name:'김동우',team:'기업지원팀',date:'10/22',title:'[Claude Code] 10:04 적용제외 검토 — 법인등기부등본 PDF와 고용현황 엑셀 2개 파일만 주고…',body:'[Claude Code] 10:04~10:21 적용제외 검토(에버그린·명진공업): 법인등기부등본 PDF + 고용현황 엑셀을 insurance-refund-kr 스킬로 자동 대조 → 등기임원 추출, 고용보험 취득자와 교차검증, 동거친족 후보 식별, 환급 추정액까지 산출(결론/근거/의견/한계 구조). [Claude Code] 05:22 Slack 자동 보고: NAS 감사 리포트 원문을 수정 없이 Slack 채널 전송 + 스레드 답글까지 2건 연속 자동 처리, 메시지 링크 회신. [Claude Code] 14:28~18:31 업무일지 자…',tool:'Claude',score:8},
+      {name:'함지우',team:'기업지원팀',date:'10/22',title:'삼청새마을금고 건: 공단 담당자 통화로 요건(23~26년 4개년도, 22년 제외, 가입확인서+…',body:'[업무일지 10/22 · 업무학습] 전날 정리한 재검토 1~6번 과정을 보조로 7개 내외 사업장에 시험 적용 요청(동일 요청 반복 3회), 어드민 최종업데이트일이 일주일 넘은 사업장 확인 요청. [사업장소통] 입금확인증·수임료 안내문·환급세부내역 대조로 차이 사유 확인, 수임료 안내문 서식 변경안 작성. [지원금검토] 원천징수부 엑셀 정리, 노션 예상이자 합계 수식 작성…',tool:'Claude',score:8},
       {name:'김화영',team:'노무관리팀',date:'10/22',title:'[사실] 노지애 퇴직금 지급명세서 3분할 산출(전체/법인기간/개인사업장)을 오늘 16:21~16:22 KST…',body:'[결론] 오늘(2026-10-22) AI 활용 \'당일 신호\'가 복수 확인되어 \'사용\'으로 기록함. 단, 본 자동실행(평일 17시 KST 예약 클라우드 세션·사용자 PC 미연결)에는 대화 전사(transcript) 조회 도구가 미연동되어, 접근 가능한 공용 메모리·Gmail·Google Drive 기록으로 재구성함. [사실] Google Drive — 오늘 16:21~16:22 KST 김화영 소유로 PDF 3건 신규 생성: \'노지애_퇴직금지급명세전체.pdf\', \'노지애_퇴직금지급명세전체_법인기간.pdf\', \'노지애_퇴직금지급명세전체…',tool:'Claude',score:7},
       {name:'허혜진',team:'노무관리팀',date:'10/22',title:'[사실] (주)온빛 10월 급여대장을 송부(01:14)→수정본(03:39)→재송부(07:45)까지 3회 반복…',body:'[사실] 확인된 산출물: (주)온빛·윤재웅정형외과 10월 급여대장, 4대보험 취득/상실신고 \'김형남\' 레코드. [추측] 급여대장 공제·차인지급액 산정 검증 및 취득/상실신고서 정리 과정에 AI 보조를 활용했을 것으로 추정. [불확실] 실제 AI 사용 로그(대화 전사)는 이 실행환경에서 확인 불가.',tool:'Claude',score:7},
       {name:'정보람',team:'기업지원팀',date:'10/22',title:'[추정] 세션 기록으로 확인 불가 — 업무일지 기반 추정. 지시: 예스365한방병원 회신 서류(통장사본·가족…',body:'금고 자료요청·재스크래핑, 새빛병원 고령자계속고용 26년 3분기 서류 요청, 인포유금융서비스 출산육아기 재검토(대체인력 제외·간접만), 청주고용센터 소통. [추측] 서류 대조·검토 정리, 자료요청 문구, 재검토 정리에 Claude가 쓰였을 개연성은 있으나 업무일지에 Claude 사용 명시가 없어 단정 불가. [불확실] 이 실행 환경에는 코워크 세션 조회 도구(session_info)가 없어 세션 기반 확인을 못 함(활용 0건 확인이 아님). ※ 본 일지는 코워크 세션 + Notion 업무일지 기준이며, 사이드바 일반 채팅(표/문서…',tool:'Claude',score:5}
@@ -1116,11 +1118,11 @@ let AI_MVP_DATA = {
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:41, weekEntries:20, daily:[
+    {team:'기업지원팀', total:11, avgRate:43, weekEntries:21, daily:[
       {dateStr:'2026-10-19', used:5, entries:5, rate:45, isFuture:false},
       {dateStr:'2026-10-20', used:5, entries:6, rate:45, isFuture:false},
       {dateStr:'2026-10-21', used:5, entries:6, rate:45, isFuture:false},
-      {dateStr:'2026-10-22', used:3, entries:3, rate:27, isFuture:false},
+      {dateStr:'2026-10-22', used:4, entries:4, rate:36, isFuture:false},
       {dateStr:'2026-10-23', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'노무관리팀', total:10, avgRate:33, weekEntries:27, daily:[
@@ -3018,7 +3020,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=2,pmT=211,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=3,pmT=243,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
