@@ -856,7 +856,7 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">254</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 254건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">255</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 558건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 255건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1071,11 +1071,11 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
+  {co:'(합명)구*운*',amt:495000,time:'10/26'},
   {co:'노*스*더*트*',amt:110000,time:'10/23'},
   {co:'노*스*러*',amt:110000,time:'10/23'},
   {co:'오*한*병*',amt:843700,time:'10/23'},
-  {co:'대*신*협*조*',amt:165000,time:'10/23'},
-  {co:'(주)훼*리*',amt:26397500,time:'10/23'}
+  {co:'대*신*협*조*',amt:165000,time:'10/23'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -1105,27 +1105,27 @@ let AI_MVP_DATA = {
   ],
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
-      {name:'김동우',team:'기업지원팀',date:'10/26',title:'[Claude Code] 964c3d7f 세션 — \'밀린 작업 순서대로 처리해줘\' 한 문장 지시만으로 개발팀…',body:'[Claude Code] 지식봇(누리) 개발 세션(09:11~16:27+, 110턴, 세션 964c3d7f): \'밀린 작업 순서대로 처리해줘\' 한 마디로 시작해 기능요청 #78(글자 상자 크기 버그) 코드 수정→신규 테스트 2건 추가→전체 테스트 872건 통과 확인→커밋(0546735)→이슈 완료 처리까지 전 사이클 자동 수행. 이어서 #83(퇴직연금 제증명 발급신청서 자동작성, 인터뷰 대기 확인)→#85(공통 첨부파일 모듈 배포, 6ff4f9e)→#86·#88(캐릭터 외형 변경, 같은 코드 줄 충돌 시 상위호환 버전으로 직접 병합…',tool:'Claude',score:9},
-      {name:'권은정',team:'노무관리팀',date:'10/26',title:'[사실] 10-26 13:34 써니사이드업코리아 세션 첫 발화: 「최종본 왔거든? 일단 되어있는 급여대장 중…',body:'[사실] 집계창(10-23 17:00~10-26 17:01) 대화 세션 3건(12:59~16:38), 직접 입력 발화 20턴(이미지 첨부 2건 포함). [사실] 도구 사용: PowerShell 94·Write 28·Edit 21·Bash 18·Read 17·Grep 2·법령조문 조회 2·AskUserQuestion 2·노션(조회·검색·생성·수정) 각 1회 — 실작업 도구 10종 이상. [사실] 지시 방식: @경로로 대상 파일을 특정하고 「정규직은 절대 건들이지말고」「일단 시험으로 잠실점만」처럼 범위·제약을 먼저 준 뒤 단계적으로 확…',tool:'Claude',score:8.3},
-      {name:'곽대영',team:'기업지원팀',date:'10/26',title:'억조1978 고령자고용지원금 2·3분기 신청서 검토. AI가 산출한 기재값과 매니저님이 작성한 PDF를 칸별…',body:'[집계기간: 직전 일지 10-22 09:28 ~ 10-26 09:38, 10-23(금) 일지 미생성분 포함 / 자동 스케줄(Gmail 회신추적·오늘 상태판) 제외] 직접 대화 3건 1) 억조1978 고령자고용지원금 26년 2·3분기 신청서: 기재값 산출(①2.3/②13.6·12.0/③4.0·3.0/④2·1명/⑤60만·30만원) → 작성 PDF 검토(보완 필요 9곳 지적: 명부·확인서 서명 공란, 접수일 기재, 우편번호 형식 등) → 수정본 2회 재확인(16:17·16:20 저장본)까지 반복 검증 2) 김포농협 검토결과 요약 엑셀 고…',tool:'Claude',score:8},
-      {name:'이새봄',team:'HR사업본부',date:'10/26',title:'[추측] GS엠비즈 설명회(안) ver.3 피드백 회신 — 법적 테두리 안에서 사측에 유리하게, 근로자 반감…',body:'[사실] C경로(메모리, 원문 아님): 오늘 갱신된 메모리에 ①GS엠비즈 영업양수도 — 설명회(안) ver.3 피드백 회신 작성 및 방침 정리(자문·문서), ②명유 워라밸+4.5 — 3분기 고용센터 보완요청 대응·명부 수정 방침(문서·계산), ③안영식 산재 재요양 — 반려요청서(산재), ④LG화학 괴롭힘 조사 — 징계양정·대금지급 방침(사건) 내용이 오늘자로 반영됨. [추측] 위 4건 모두 오늘 Claude 대화에서 다뤄진 것으로 보이나 대화 원문은 확인하지 못함. [사실] B경로: 포컴퍼니 견적·기금 안내 메일은 도원 견적서 스킬…',tool:'Claude',score:7},
-      {name:'김화영',team:'노무관리팀',date:'10/26',title:'[추측] 고객사 사안을 Claude로 먼저 쟁점 정리한 뒤, 사내 노무사(양이진) 자문이 필요한 부분을 분리…',body:'[사실] 본 항목은 매일 평일 17시 KST 자동 실행 작업으로 생성됨. 이번 실행 환경에서는 당일 Claude 대화 원문(transcript) 직접 조회 도구가 제공되지 않아, 여러 Claude 접점에 공유되는 메모리에 당일(2026-10-26, KST) 신규 기록된 내용을 근거로 분석함. [사실] 당일 노무 자문 관련 대화에서 \'양이진 노무사(당사 노무사)에게 자문 요청이 필요한 사안\'이 식별·정리됨(메모리 당일 갱신 기록). [추측] 고객사 노무 이슈를 Claude로 1차 검토한 뒤, 사내 노무사 자문 단계로 넘기는 업무 흐름…',tool:'Claude',score:6},
-      {name:'정보람',team:'기업지원팀',date:'10/26',title:'[추정] 에스병원 급여대장(26.07~09, 7인) 검증 → 고령자고용지원금 5회차 신청 근거 정리, 사업장…',body:'[업무일지 기준 추정] 오늘 업무일지: 에스병원 고령자고용지원금 26년 3분기(5회차) 신청·서류 회신·급여대장(26.07~09, 7인) 검토, 옥성기업·강남제일요양병원·봉화군립노인전문요양병원 서류 요청 및 사업장 소통, 봉화군립 출산육아기 대체인력 확인. 이 중 서류 요청 메일 초안 작성과 급여대장 검증 등이 Claude 활용 개연성이 높으나, 이번 수집 범위에서는 코워크 세션 기록을 확인하지 못해 Claude로 수행했다고 단정하지 않음. ※ 본 일지는 코워크 세션 + Notion 업무일지 기준이며, 사이드바 일반 채팅(표/문서…',tool:'Claude',score:5},
-      {name:'허혜진',team:'노무관리팀',date:'10/26',title:'[사실] 삼우씨에스씨 계약직 김건후 근로계약서(현장소장, 계약기간 2026.11.09~2027.04.30)를…',body:'[사실] 확인된 본인 산출물: 근로계약서(삼우 김건후) 및 급여대장 관련 회신·단시간 근로계약서 작성·송부. [추측] 근로계약서 자동생성(인사카드→VLOOKUP 계약서)과 급여대장 작성·검증 과정에서 AI 보조가 사용된 것으로 추정. [불확실] 산출물로 드러나지 않는 영역의 AI 활용 여부는 확인 불가.',tool:'Claude',score:5}
+      {name:'김동우',team:'기업지원팀',date:'10/26',title:'[Claude Code] 964c3d7f 세션 — \'밀린 작업 순서대로 …',body:'[Claude Code] 964c3d7f 세션 — \'밀린 작업 순서대로 처리해줘\' 한 문장 지시만으로 개발팀 기능요청 약 20건(#78, #83~#102)을 우선순위대로 꺼내 코드 수정→테스트 추가→전체 회귀테스트(872~953건)→충돌 병합→배포→이슈 종료까지 반복 수행했고, 정책 판단이 필요한 지점(인증서 조회 이벤트 발생 기준 등)만 선별해 DM으로 …',tool:'Claude',score:9},
+      {name:'권은정',team:'노무관리팀',date:'10/26',title:'[사실] 10-26 13:34 써니사이드업코리아 세션 첫 발화: 「최종본…',body:'[사실] 10-26 13:34 써니사이드업코리아 세션 첫 발화: 「최종본 왔거든? 일단 되어있는 급여대장 중에 정규직은 마무리된거라 절대 건들이지말고 시급제만 추가로 반영 및 확인해줘」. [의견] 대상 파일(인적현황 최종본)을 경로로 특정하고, 이미 확정된 정규직 영역을 수정 금지로 묶은 뒤 작업 범위를 시급제로 좁혀 줘서 확정본 훼손 위험을 미리 차단한 …',tool:'Claude',score:8.3},
+      {name:'곽대영',team:'기업지원팀',date:'10/26',title:'억조1978 고령자고용지원금 2·3분기 신청서 검토.',body:'억조1978 고령자고용지원금 2·3분기 신청서 검토. AI가 산출한 기재값과 매니저님이 작성한 PDF를 칸별로 대조해 숫자(①~⑤)는 모두 맞음을 확인하고, 접수 시 보완요청 소지 9곳(2쪽 명부·확인서 서명 공란, 음영칸 접수일 기재, 우편번호 형식 오류 등)을 우선순위로 제시. 수정 후 저장본을 두 번 다시 열어 \'접수일만 반영되고 우편번호·이메일은 미…',tool:'Claude',score:8},
+      {name:'이새봄',team:'HR사업본부',date:'10/26',title:'[추측] GS엠비즈 설명회(안) ver.3 피드백 회신 — 법적 테두리 …',body:'[추측] GS엠비즈 설명회(안) ver.3 피드백 회신 — 법적 테두리 안에서 사측에 유리하게, 근로자 반감은 줄이고 승계 동의를 이끄는 방향으로 의사표시 기한(승계 기준일 12월 말)·거부 방법 고지 범위 등 쟁점별 방침을 정리한 것으로 메모리상 확인됨. [불확실] 인용 근거·산출 범위는 대화 원문 미확인으로 구체적으로 판정하지 못함.',tool:'Claude',score:7},
+      {name:'김화영',team:'노무관리팀',date:'10/26',title:'[추측] 고객사 사안을 Claude로 먼저 쟁점 정리한 뒤, 사내 노무사…',body:'[추측] 고객사 사안을 Claude로 먼저 쟁점 정리한 뒤, 사내 노무사(양이진) 자문이 필요한 부분을 분리해 낸 지점 — \'AI 1차 검토 + 전문가 자문 연계\'라는 바람직한 분업 패턴. [불확실] 대화 원문 미확보로 구체적 사안·질문의 깊이는 확인 불가.',tool:'Claude',score:6},
+      {name:'정보람',team:'기업지원팀',date:'10/26',title:'[추정] 에스병원 급여대장(26.07~09, 7인) 검증 → 고령자고용지…',body:'[추정] 에스병원 급여대장(26.07~09, 7인) 검증 → 고령자고용지원금 5회차 신청 근거 정리, 사업장별 서류요청 메일 초안 작성이 가장 활용 개연성 높음. 코워크 세션 미확인으로 사실 확정 불가.',tool:'Claude',score:5},
+      {name:'허혜진',team:'노무관리팀',date:'10/26',title:'[사실] 삼우씨에스씨 계약직 김건후 근로계약서(현장소장, 계약기간 202…',body:'[사실] 삼우씨에스씨 계약직 김건후 근로계약서(현장소장, 계약기간 2026.11.09~2027.04.30)를 요청 당일 즉시 작성·송부. [추측] 근로계약서 자동생성 스킬 기반 작성으로 당일 산출물 중 활용도가 가장 높았던 것으로 추정.',tool:'Claude',score:5}
     ],
   bestCaseRangeLabel: '10/26',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:27, weekEntries:3, daily:[
-      {dateStr:'2026-10-26', used:3, entries:3, rate:27, isFuture:false},
+    {team:'기업지원팀', total:11, avgRate:36, weekEntries:4, daily:[
+      {dateStr:'2026-10-26', used:4, entries:4, rate:36, isFuture:false},
       {dateStr:'2026-10-27', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-30', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:30, weekEntries:8, daily:[
-      {dateStr:'2026-10-26', used:3, entries:8, rate:30, isFuture:false},
+    {team:'노무관리팀', total:10, avgRate:30, weekEntries:7, daily:[
+      {dateStr:'2026-10-26', used:3, entries:7, rate:30, isFuture:false},
       {dateStr:'2026-10-27', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
@@ -3019,7 +3019,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=3,pmT=254,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=3,pmT=255,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
