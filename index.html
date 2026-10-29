@@ -1106,59 +1106,56 @@ let AI_MVP_DATA = {
   ],
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
-      {name:'곽대영',team:'기업지원팀',date:'10/27',title:'[사실] 동명기술공단 임채부담금경감 수임료안내문을 발송 전 공단 원본으로 독립 재계산해 퇴직자 보수변경분(+…',body:'[사실] 집계 범위: 직전 일지(10-26 09:38 실행) 이후 대화 2건(10-26 오후 진행분). 자동 스케줄(Gmail 회신 추적·오늘 상태판·주간 루틴 점검)은 제외. 1. [사실] 동명기술공단 임금채권부담금경감 환급 최종 점검: 근로자산정상세내역(재직 1,639행·퇴직 278행)으로 수임료안내문 재계산 → 퇴직 G8 수식 부호 오류(=2629980-57590) 발견, 총환급액 115,180원·청구액 12,700원 과소 확인 → 사용자 수정 후 재점검(총환급 31,021,410원, 청구액 3,412,300원 일치), E8…',tool:'Claude',score:9},
-      {name:'권은정',team:'노무관리팀',date:'10/27',title:'[사실] 10-27 11:17 "잠실이랑 판교 파트타이머들 단시간 근로자잖아. 얘네 공휴일 유급분은 일 소정…',body:'[사실] 대화 세션 2건(10-26 17:16~10-27 16:16, 10-27 13:31~13:32), 사용자 직접 발화 26턴. [사실] 도구: PowerShell 64·Edit 40·Write 19·Read 19·노션(검색7·조회2·fetch2·생성2)·Bash 7·Grep 5·법령 MCP 8(조문4·법령상세1·판례1·노동법1·행정규칙1)·Skill 1(retiree-severance-check). [사실] 지시 방식: 원본 파일을 @첨부로 특정하고 \'이게 원본이야 이거 기준으로 해줘\', \'정산 파일 만들어주기전에 최종 확인\'…',tool:'Claude',score:8.2},
-      {name:'김동우',team:'기업지원팀',date:'10/27',title:'[Claude Code] 10:34 세션(63f77f30)에서 자동 생성된 옵시디언 세션노트에 기록된 \'4대…',body:'[Claude Code] 05:20 nas_audit 스크립트 산출물인 \'미발송\' 리포트(.txt)를 수정 없이 원문 그대로 읽어 슬랙 채널(C0BJSG3H49F)에 전송, 메시지 링크 반환 (세션 098d2052). [Claude Code] 05:20~05:21 같은 파이프라인의 \'스레드\' 리포트를 원문 그대로 해당 채널 스레드에 답글로 전송 (세션 8dabbef4) — 정형 리포트 2건을 사람 개입 없이 연속 배포. [Claude Code] 10:34 세션 다이제스트(2026-10-27_digest.md)를 읽어 정해진 YAML…',tool:'Claude',score:8},
-      {name:'김화영',team:'노무관리팀',date:'10/27',title:'[사실] 여러 거래처 위하고 급여 업로드 시 한글(이름·부서)만 깨지고 숫자는 정상이던 반복 오류의 원인을,…',body:'[사실] 오늘 Claude 활용(메모리 갱신 신호 기준)은 크게 두 축. ① 급여마감 검토·검증: 쁨글로벌의원 명동점 고용보험 공제 룰(과세금액×0.9%, 10원 미만 절사, F-4 임의가입 처리) 정리, 하마마츠포토닉스코리아㈜ 소득세·지방소득세(아마란스·더존 IU 산출값 반영) 검토, 서안기초 급여 검토(대장 지급일 처리·재입사자 인사카드), 세무법인혜움 연봉인상 행 처리 규칙 및 월 급여 작업 루틴 정리. ② 엑셀 트러블슈팅: 위하고 업로드용 .xlsx의 sharedStrings 구조 이슈 해결, 동명이인(재입사) 사원코드 최신…',tool:'Claude',score:8},
-      {name:'박혜빈',team:'노무관리팀',date:'10/27',title:'[사실] 성수·뚝섬 작업본 검증 요청. 본인이 직접 입력한 급여대장(정규직 8명 추가연장시간)과 시급테이블(…',body:'[사실] Claude Code 세션 1건(10/26 17시 시작, 10/27 오전 9시~10시 37분 활동)에서 4개 요청 처리. ① 을지로점 작업본을 기준으로 03 근로자정보 폴더의 지점별 근로계약서 파일을 찾아 강남·네이버·성수3호점 10월 작업본(xlsb)에 계약서 시트 2종을 삽입하고 VLOOKUP/XLOOKUP 수식을 을지로점 방식으로 연결(원본 백업·수정 전후 diff 검증 포함). ② 진행 상황 확인("완료됐어?"). ③ 을지로점 정규직 계약서를 수동 페이지나눔 유지한 채 인쇄 2쪽으로 맞추도록 요청 → 파일이 열려 있…',tool:'Claude',score:8},
-      {name:'박형숙',team:'경영지원팀',date:'10/27',title:'흩어진 예약 작업들을 인사팀 에이전트로 통합하는 기획을 구현 전에 먼저 정리한 것',body:'1. 인사·총무용 슬랙 봇 기획 (기존 예약 작업을 인사팀 AI 에이전트로 묶는 방향 구상) 2. 월간 타운홀 팀별 AI Native 발표 템플릿 기획 (11월 타운홀 적용) 3. 여가친화기업 재인증 진행 현황 및 자료 정리 4. 채용 면접 일정 조율 (면접관 구성, 사무실 위치·주차·점심시간 등 안내 정보 정리)',tool:'Claude',score:7},
-      {name:'허혜진',team:'노무관리팀',date:'10/27',title:'[사실] 10월 급여대장 다건(로우커피스탠드 뚝섬/성수·인광건설 등)과 신규 입사자 근로계약서를 하루에 작성…',body:'[사실] 다수 사업장의 급여대장·근로계약서·근로소득원천징수 서류 산출물을 작성/송부한 정황을 메일로 확인함. [추측] 급여대장 작성·검증 및 근로계약서 자동생성 과정에서 AI 보조를 활용한 것으로 추정됨(평소 AI 처리 업무유형에 해당).',tool:'Claude',score:7},
-      {name:'함지우',team:'기업지원팀',date:'10/27',title:'신괴정새마을금고 적용제외 검토에서 법인등기부등본과 고용현황 취득일의 중복…',body:'신괴정새마을금고 적용제외 검토에서 법인등기부등본과 고용현황 취득일의 중복자 대조를 보조에게 맡긴 뒤, 결과에 누락 의심을 제기해 재확인을 요구한 점. 단순 위임이 아니라 산출물을 검증하고 되돌리는 구조(위임 범위 설계 + 사람의 검증)라 좋은 활용이다.',tool:'Claude',score:7},
-      {name:'정보람',team:'기업지원팀',date:'10/27',title:'[추측] 확인된 대화 기록은 없음. 업무일지상 청일도 1회차 서류 요청(더조은플란트치과 정현지·신나리) 건이…',body:'[사실] 업무일지(10/27) 기준 출산육아기 대체(하나노인전문병원 허윤 보완 서류 제출·회신, 6월 이체확인증 검토), 청일도 1회차 서류 요청·회신(더조은플란트치과 정현지·신나리, 옥성기업 이나겸), 급여대장·이체확인증 검토(26.03~26.09), 사업장·공단 소통 등 11건이 처리됨. [불확실] 이번 실행에서 코워크 세션 조회 도구(session_info)가 노출되지 않아 Claude 사용 여부·방식을 직접 확인하지 못함. [추측] 자료요청 메일 초안·급여대장/이체확인증 검토 단계에서 Claude 활용 개연성 있음. ※ 본…',tool:'Claude',score:6}
+      {name:'곽대영',team:'기업지원팀',date:'10/28',title:'농신에프디 수임료안내문 검토. 사용자가 직접 작성한 안내문을 AI에 검산시켜, 공단 원본 기준 3개 독립 경…',body:'[집계 기준] 직전 일지(10-27 09:26 실행) 이후 직접 연 대화 2건 (자동 스케줄 제외) 1. 농업회사법인(주)농신에프디 적용제외 환급 수임료안내문 작성·검토: 충당반환내역조회(고용·산재) 기반 잠정 청구액 산출 → 사용자가 작성한 안내문을 3개 독립 경로(통장반환·충당감액·총환급액)로 검산, 청구액 2,717,500원 확정(총환급 8,234,900 × 30% × 1.1, 100원 미만 버림), 충당+개산과오납 합산 3행 검증, 근로자부담금 연도별 역산(2019년 +0.80% 편차 발견), 확인요청 5건 도출 2. 개인…',tool:'Claude',score:9},
+      {name:'박혜빈',team:'노무관리팀',date:'10/28',title:'[사실] 웍스메이트 10월 급여대장에서 "9월이랑 비교해 소득세·지방소득세에 빠진 게 없냐"고 물어, 39명…',body:'[사실] 오늘 Claude 세션 5건 확인(10/28 KST). ① 웍스메이트: 퇴사자 8명 중도퇴사 정산세액을 급여대장 BE·BF칸에 입력하고 세무 PDF와 원 단위 대사, 39명 소득세·지방소득세를 9월과 비교해 차이 원인(임원 감액·청년감면 종료·연차수당 등) 표로 정리. ② 성민학원: 사학연금 PDF 4개(구갈·수지·수원·화산) 77명 19,637,440원 시트 입력, 검증칸 TRUE 확인, 취소·합산 건 별도 표시, 김승아 대여상환금 공제 여부 확인. ③ 알씨에스컴퍼니: 박민경 보수총액 36,901,044원 검증 및 퇴직정…',tool:'Claude',score:9},
+      {name:'허혜진',team:'노무관리팀',date:'10/28',title:'[사실] 하루에 11개 이상 사업장의 10월 급여대장을 작성·송부(총 18건 발송). [추측] 반복적인 급여…',body:'[사실] 확인된 산출물: 11개 이상 사업장의 10월 급여대장 작성·송부, 퇴직금 산정서 작성(수정본 포함), 4대보험 취득/상실신고 DB 레코드 생성, 퇴사자 원천징수영수증 요청 처리. [추측] 급여대장 검증·세후 역산, 취득/상실 신고서 작성, 퇴직금 평균임금 산정 등에서 AI 보조를 활용했을 가능성이 높음(평소 AI 처리 업무유형과 일치). [불확실] 구체적 AI 사용 단계·비중은 대화 전사 미접근으로 단정 불가.',tool:'Claude',score:8},
+      {name:'권은정',team:'노무관리팀',date:'10/28',title:'[사실] 10/27 18:35 「보내기전에 최종 확인해주고, 입사자랑 퇴사자중에 노션에 안올라간 사람 있으면…',body:'[사실] 대화 세션 1건(10/27 17:54~18:40), 사용자 입력 기록 16건(이미지 첨부·백그라운드 알림·스킬 본문 포함, 직접 타이핑한 지시는 9턴). [사실] 도구: PowerShell 28·Read 23·Write 12·Edit 12·Glob 4·Grep 3·법령조회 3·ToolSearch 3·노션(조회·검색·fetch·생성) 4·Skill 1 — 10종. [사실] 스킬 sunnyside-merged-ledger(월급제 통합본)를 시급제 통합본 생성에 응용함. [사실] 법령 조회 도구로 시급제 4대보험 가입 여부 근거…',tool:'Claude',score:7.9},
+      {name:'김화영',team:'노무관리팀',date:'10/28',title:'[사실] 세무법인혜움 급여대장에서 \'선지급\' 퇴사자의 차인지급액을 0으로 맞추는 처리와, 건강보험·장기요양을…',body:'[사실] 본 항목은 매일 평일 17시 KST 자동 실행 작업으로 생성됨. 이 실행 환경에는 당일 Claude 대화 원문(transcript) 직접 조회 도구가 없어, 여러 Claude 접점에 공유되는 메모리의 당일(2026-10-28, KST) 갱신 신호를 근거로 분석함. [사실] 오늘 메모리 갱신 신호 두 축 — ① (오전) 업무일지 자동화: 전일(10/27) 업무일지 페이지를 오늘(10/28) 양식으로 복제. ② (오후) 급여마감 검토: 세무법인혜움 급여대장 작업 — \'선지급\' 표기 퇴사자는 세후 선지급금을 입력해 차인지급액이…',tool:'Claude',score:7},
+      {name:'정보람',team:'기업지원팀',date:'10/28',title:'[추측] 코워크 세션에서 확인된 사례 없음. 업무일지상 한빛치과병원 출산육아기 간접·대체 대상자 서류 요청…',body:'[사실] 코워크 세션 수집 도구가 이번 실행 환경에 연결되지 않아 코워크 세션은 확인하지 못함. [사실] Notion 업무일지상 오늘 업무: 옥성기업(이나겸 청일도 1회차 신청·서류 회신·8월 출근부 보완, 급여대장·이체확인증 검토), 하나노인전문병원(출산육아기 대체 허윤 이체확인증 보완·회신, 근로계약서 확인서 작성), 한빛치과병원·더조은요양병원 출산육아기 자료요청. [추측] 서류 요청 메일·확인서 작성·검토 등에 Claude가 쓰였을 개연성은 있으나 업무일지만으로 AI 수행 여부는 단정 불가. ※ 본 일지는 코워크 세션 + No…',tool:'Claude',score:5}
     ],
-  bestCaseRangeLabel: '10/27',
+  bestCaseRangeLabel: '10/28',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:41, weekEntries:10, daily:[
+    {team:'기업지원팀', total:11, avgRate:33, weekEntries:13, daily:[
       {dateStr:'2026-10-26', used:5, entries:5, rate:45, isFuture:false},
       {dateStr:'2026-10-27', used:4, entries:5, rate:36, isFuture:false},
-      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-10-28', used:2, entries:3, rate:18, isFuture:false},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-30', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:35, weekEntries:15, daily:[
+    {team:'노무관리팀', total:10, avgRate:37, weekEntries:21, daily:[
       {dateStr:'2026-10-26', used:3, entries:8, rate:30, isFuture:false},
       {dateStr:'2026-10-27', used:4, entries:7, rate:40, isFuture:false},
-      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-10-28', used:4, entries:6, rate:40, isFuture:false},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-30', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'HR사업본부', total:8, avgRate:7, weekEntries:3, daily:[
+    {team:'HR사업본부', total:8, avgRate:4, weekEntries:4, daily:[
       {dateStr:'2026-10-26', used:1, entries:1, rate:13, isFuture:false},
       {dateStr:'2026-10-27', used:0, entries:2, rate:0, isFuture:false},
-      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-10-28', used:0, entries:1, rate:0, isFuture:false},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-30', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'경영지원팀', total:3, avgRate:33, weekEntries:2, daily:[
+    {team:'경영지원팀', total:3, avgRate:22, weekEntries:2, daily:[
       {dateStr:'2026-10-26', used:1, entries:1, rate:33, isFuture:false},
       {dateStr:'2026-10-27', used:1, entries:1, rate:33, isFuture:false},
-      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-30', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'대외협력팀', total:3, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-10-26', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-10-27', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-30', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'기금팀', total:1, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-10-26', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-10-27', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-10-28', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-10-29', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-10-30', used:0, entries:0, rate:0, isFuture:true}
     ]}
