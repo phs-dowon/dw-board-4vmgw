@@ -1106,58 +1106,57 @@ let AI_MVP_DATA = {
   ],
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
-      {name:'권은정',team:'노무관리팀',date:'11/10',title:'[사실] 13:06 "10월 퇴사자 중에 급여 변동된 애들 있으면 상실신고준비 파일이랑 노션 보수총액 수정해…',body:'[사실] 대화 세션 4건(11-09 17:00~17:14 업무판, 11-10 08:55~13:06 돋움병원, 13:28~14:25 하이드로리튬, 16:39~16:56 해리), 사용자 발화 20턴. [사실] 도구: PowerShell 79·작업목록 26·Edit 22·Write 13·Read 9·Bash 8·노션 페이지 수정 5·Grep 3·노션 파일 업로드 2·법령 조문 조회 2(국민건강보험법 §69·§109)·아티팩트 데이터 2·노션 조회 1·아티팩트 게시 1. [사실] 지시 방식: 작업본·수정본·발송본 경로를 @로 지정하고 \'주…',tool:'Claude',score:8.5},
-      {name:'곽대영',team:'기업지원팀',date:'11/10',title:'[사실] 청일도 지침 원문 대조. \'원문 ㄷ재\'라는 짧은 지시만으로 상공회의소 게시본 PDF를 찾아 모듈과…',body:'[사실] 업무 대화 4건(예약작업 자동실행 제외) ① 청일도 모듈 원문 대조: \'26.1월 청년일자리도약장려금 지침 PDF를 dowon-subsidy-pipeline 청일도 모듈과 대조, [불확실] 4개 항목(취업애로 10개 유형·고용조정·중복지원·신청기한)을 쪽수 근거로 확정, P1 기업요건(5인·매출·한도) 추가. 다음 작업 순서표(영파 재요청→지침 대조→3번째 모듈) 정리 ② 대리인 선임 신고서 PDF 수정 2건(광주YWCA신협·이리평화새마을금고): 사업장관리번호 끝자리 0 누락 보정, 수정 전후 이미지 대조로 변경 영역만 확…',tool:'Claude',score:8},
-      {name:'박혜빈',team:'노무관리팀',date:'11/10',title:'[사실] 최저임금 검토 → 재분배 연속 질의. 첫 답변에서 AI가 \'식대 20만원을 빠뜨렸을 수도 있다\'는…',body:'[사실] 세션 1건(「2027년 최저임금 기본급 및 연장근로수당」, 10:37~11:15 KST), 질문 4개. 이 예약 작업 세션은 제외. ① 2027년 최저임금 검토: AI가 웹검색으로 2027년 최저임금(시급 10,700원, 고용노동부 고시 제2026-60호)을 확인하고, 법령 조회 도구로 최저임금법 §6④1호·시행규칙 §2①1호를 원문 확인 → 기본급만 산입하면 시급 약 9,749원으로 미달(월 198,749원 부족) 판정, 식대 유무별 시나리오 A/B 제시. ② 재분배: \'기본급/연장수당뿐, 시급 10,700원 기준\'으로…',tool:'Claude',score:8},
-      {name:'함지우',team:'기업지원팀',date:'11/10',title:'158곳 기초정보 입력을 한 번의 요청으로 묶음 카드화하고, 중복 건을 걸러 내 날짜 정정까지 이어서 처리한…',body:'- 예약 업무(실무팁·토탈 확인·보고서 미발송 점검)를 자동 실행해 결과 수령 - KD운송그룹 적용제외 신고 이력을 노션에서 모아 사업장·접수일자·신청서별로 정리 - 158곳 기초정보를 NAS에서 확인해 진행상황 기록 카드를 묶음으로 생성, 중복 기록은 자동으로 건너뛰게 처리 - 앞서 10/28로 들어간 6건의 날짜를 오늘로 고치는 수정 카드 요청',tool:'Claude',score:8},
-      {name:'김동우',team:'기업지원팀',date:'11/10',title:'[Claude Code] session-worklog 자동화의 "Today To-do" 생성이 하루 중 3회…',body:'[Claude Code] nas_audit 자동화 파이프라인 — "미발송_2026-11-10.txt" 리포트 원문을 한 글자도 수정하지 않고 그대로 슬랙 채널(C0BJSG3H49F)에 발송, 전송 후 메시지 링크 회수까지 자동 처리. 같은 파이프라인에서 "스레드_2026-11-10.txt"도 동일 메시지의 스레드 답글로 원문 그대로 전송 — 원문 무결성 보존이 핵심인 발송 작업에 Claude Code를 실행 엔진으로 사용. [Claude Code] session-worklog 자동화 — 세션 다이제스트 + 노션 진행상황·자료요청·…',tool:'Claude',score:6},
-      {name:'김우석',team:'기업지원팀',date:'11/10',title:'[추측] 팀 AI 지표 기준표 설계 대화: 팀 카드 지표 3개에서 출발 → 핵심 목표 4종으로 재구성, \'재…',body:'[추측] AI를 지표·목표 설계 파트너로 활용: 지표/목표 분리, 분모·산식·시작/종료 시점, 기준값(없으면 \'11월 측정\'), 자동 수집처를 노션 속성명(예: [근복]/[고용]대리인선임접수일, [청일도]·[출산육아기]·[직장복귀] 최종검토일) 기준으로 정의하고, 단계별 AI 활용 방식(에이전트 알림·갱신 안내메일 자동발송·팩스 자동접수)을 기준표에 반영. [추측] 매 평일 AI 활용일지 노션 기록 + 윤상필 멘션 보고 자동화 설정.',tool:'Claude',score:6},
-      {name:'허혜진',team:'노무관리팀',date:'11/10',title:'[사실] 4대보험 취득신고 1건을 노션 신고 DB에 정형 입력(취득부호·소득월액·소정근로시간 등 항목화).…',body:'[사실] 노션 취득/상실신고 DB 레코드 1건 생성, 자문료 계산서 발행 2건 처리, 메누버 10월 급여대장 수정본·가입자명부 작성·송부. [추측] 취득신고 대상자 정보 정리·입력과 급여대장 수정·검증, 계산서 품목·금액 산정 과정에서 AI 보조를 활용한 것으로 추정.',tool:'Claude',score:5},
-      {name:'이새봄',team:'HR사업본부',date:'11/10',title:'[추측] 전북은행 건 — 동일 근로자의 노동청 진정(근기법 §43 중식대 공제)과 전북지노위 차별시정(전북2…',body:'[불확실] A경로(Cowork 로컬 세션 대화 원문) 확인 불가 — 클라우드 실행 환경이라 세션·대화 이력 조회 도구가 없음. [추측] 기금 주간회의 \'의제 및 안건\' 섹션은 문체(\'위법 여부를 단정한 것은 아닙니다\', \'확인되지 않았습니다\', 고객 회신 링크 첨부)가 AI 정리물로 보이나 작성 주체는 확인되지 않음(B경로, 산출물 기반 재구성). [사실] 오늘 17:26(KST) 갱신된 메모리 파일(전북은행 건)에 이새봄 노무사가 노동청 진정·지노위 차별시정 건을 통합한 의견서 견적 안내를 준비한 내용이 있어 claude.ai 웹…',tool:'Claude',score:4}
+      {name:'권은정',team:'노무관리팀',date:'11/11',title:'[사실] 11-11 10:42 (미트엔터테인먼트): "이렇게 세분 일용직 하루일당 6만원 측정부탁드립니다.…',body:'[사실] 대화 세션 3건(10:42~11:11 미트엔터, 11:25~16:50 해리, 14:11~17:01 하이드로리튬), 사용자 발화 26턴. [사실] 도구: PowerShell 120·Write 24·Edit 16·Read 11·법령조회 4·ArtifactData 4·노션 조회/검색/생성 5·계획/마무리 68. [사실] 지시 방식: 작업본·발송본·접수자료 경로를 @첨부로 특정하고 고객 요청 원문을 붙여 \'맞게 반영됐는지 확인\'을 요청, 사용자가 직접 수정한 뒤 AI에게 재검증·후속 반영(위하고·발송본)을 맡기는 분업. [추측]…',tool:'Claude',score:8.4},
+      {name:'곽대영',team:'기업지원팀',date:'11/11',title:'[사실] 「지원금 검토 스킬 기획」에서 사내 DB 이전(시기 미정)을 미리 짚은 질문. AI가 스킬 안에서…',body:'[사실] 집계 기간: 직전 일지 실행 11-10 09:31 ~ 이번 실행 11-11 09:41 (KST). 매일 도는 예약 작업(브리핑 처리기 자동 보고 등)은 제외. 1. [사실] 「지원금 검토 스킬 기획」: dowon-subsidy-pipeline 정리 마무리(SKILL.md 1파일, 모듈 3종: 고령자·청일도·출산육아기, 시험용 스킬 삭제). 다음 단계로 B(일괄 판정)를 선택하되 개별 요청 모드는 유지하도록 지시. 노션 SQL 조회 공용 한도 초과를 확인. 사내 DB 이전 예정을 고려해 \'데이터 출처 표(§1-1)\'로 노션…',tool:'Claude',score:8},
+      {name:'김화영',team:'노무관리팀',date:'11/11',title:'[의견] ㈜더홍코리아 퇴직금 3종 산정 — [사실] 법인전환(2025.04.01) 전후 기간 분리, 식대·고…',body:'[추측] 메모리 갱신 신호 기준, 오늘 Claude를 퇴직금 산정·DC형 퇴직연금 정산·급여대장 검토에 활용함. [사실] ① ㈜더홍코리아 다지점 퇴직금을 3종(전체 / 법인전환기간 2025.04.01~퇴사일 / 개인사업자기간) 구조로 산정하고, 서태승 건에서 식대를 고정연장수당과 합쳐 고정수당에 반영, 상여금은 도원 산정법인 개월 기준(×3/12) 산입, 퇴직 직전 미사용 연차수당은 평균임금 미산입으로 정리. ② 쁨글로벌의원 명동점 DC형 퇴직연금 최초불입·추계액을 2026.10.31 기준으로 산정(가입 대상=1년 이상 재직자, 소…',tool:'Claude',score:8},
+      {name:'이새봄',team:'HR사업본부',date:'11/11',title:'[사실] 지에스엠비즈 설명회 시나리오 ver.4 재검토 의견 회신 초안. [사실] 근로기준법 §24③의 해고…',body:'[자문·문서] 지에스엠비즈 설명회 시나리오 ver.4 재검토 의견 메일 초안: 근기법 §24③ 50일 전 통보 역산(2026.12.12.), 수정 전/후 대조표, Q&A 수정안까지 구조화. 근거 B(Gmail 임시저장). [사실] [사건·견적] 전북은행 법률의견서 견적 메일 및 히스토리 기록: 기간제법 §14① 재심 기한(11.13) 산정, 검토 범위·제외 범위 정리. 근거 B(Gmail·Notion 히스토리)+C(memory jeonbuk-bank.md 오늘 cowork 갱신). [사실] [자문] 명유 12월 휴무·워라밸+4.5…',tool:'Claude',score:8},
+      {name:'김동우',team:'기업지원팀',date:'11/11',title:'[Claude Code] 세션 ddf19ce2. "call pipeline 어플 기능 로그 다 점검하고 회의…',body:'[Claude Code] 업무일지 자동화 파이프라인(세션 8b86c67c·9ff28609·c89ec6e9): 세션 다이제스트+노션 진행상황/자료요청/통화기록을 읽어 「Today To-do」 DB에 신규 항목 생성. 중간에 「자료요청」이라는 허용되지 않는 업무구분 값으로 1차 생성이 거부되자 「사업장 관리」로 고쳐 재시도하는 자가수정 처리가 있었음. [Claude Code] 슬랙 리포트 자동화(세션 9037017f·b83a06cd): nas_audit 스크립트가 만든 \'미발송\'/\'스레드\' 리포트 파일을 한 글자도 바꾸지 않고 그대로…',tool:'Claude',score:6},
+      {name:'함지우',team:'기업지원팀',date:'11/11',title:'본·지사 전입전출 연속근로 규칙을 정해 연도별 퇴직금 지급대상자 수를 한 번에 산정하고, 본인이 가진 숫자(…',body:'- 기초정보(퇴직금 지급방법·퇴직연금 가입연도) 판독·진행상황 일괄 기록 및 미검토 사업장 리스트업 - 어드민 고용현황 기반 퇴직금 지급대상자 수 코드 산정(전입전출 이음), 숫자는 텍스트로 확인 - 예약 점검(접수완료 토탈 확인·검토보고서 발송 점검) 자동 실행, 업무소통방 글 초안, 매일 반복 예약 조정 - 상호 중복 입력 건 경과 확인',tool:'Claude',score:6},
+      {name:'허혜진',team:'노무관리팀',date:'11/11',title:'[사실] 당일 확인된 산출물 중 메누버 10월 급여대장 최종본 확정·송부가 업무 깊이가 가장 큼. [추측]…',body:'[사실] 메누버 10월 급여대장 최종본 확정·송부(급여대장 산출물)와 바래온(주) 퇴사자 퇴직연금 산정·송부(퇴직연금 산출물), 2건의 완료 산출물 확인. [추측] 두 산출물 모두 허혜진이 평소 AI로 처리하는 업무유형(급여대장 작성·검증, 퇴직연금/정산)에 해당하여 작성·검증 과정에서 AI 보조를 활용했을 가능성이 높음. [불확실] 다만 산출물(발송 메일) 자체만으로는 AI 사용을 직접 증명할 수 없음.',tool:'Claude',score:4}
     ],
-  bestCaseRangeLabel: '11/10',
+  bestCaseRangeLabel: '11/11',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:32, weekEntries:9, daily:[
+    {team:'기업지원팀', total:11, avgRate:33, weekEntries:16, daily:[
       {dateStr:'2026-11-09', used:3, entries:4, rate:27, isFuture:false},
-      {dateStr:'2026-11-10', used:4, entries:5, rate:36, isFuture:false},
-      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-10', used:5, entries:6, rate:45, isFuture:false},
+      {dateStr:'2026-11-11', used:3, entries:6, rate:27, isFuture:false},
       {dateStr:'2026-11-12', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-13', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:35, weekEntries:14, daily:[
+    {team:'노무관리팀', total:10, avgRate:33, weekEntries:21, daily:[
       {dateStr:'2026-11-09', used:4, entries:7, rate:40, isFuture:false},
       {dateStr:'2026-11-10', used:3, entries:7, rate:30, isFuture:false},
-      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-11', used:3, entries:7, rate:30, isFuture:false},
       {dateStr:'2026-11-12', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-13', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'HR사업본부', total:8, avgRate:13, weekEntries:4, daily:[
+    {team:'HR사업본부', total:8, avgRate:13, weekEntries:7, daily:[
       {dateStr:'2026-11-09', used:1, entries:2, rate:13, isFuture:false},
       {dateStr:'2026-11-10', used:1, entries:2, rate:13, isFuture:false},
-      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-11', used:1, entries:3, rate:13, isFuture:false},
       {dateStr:'2026-11-12', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-13', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'경영지원팀', total:3, avgRate:0, weekEntries:1, daily:[
       {dateStr:'2026-11-09', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-10', used:0, entries:1, rate:0, isFuture:false},
-      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-12', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-13', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'대외협력팀', total:3, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-11-09', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-10', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-12', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-13', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'기금팀', total:1, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-11-09', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-10', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-11', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-12', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-13', used:0, entries:0, rate:0, isFuture:true}
     ]}
