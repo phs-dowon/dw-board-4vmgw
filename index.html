@@ -1107,60 +1107,58 @@ let AI_MVP_DATA = {
   ],
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
-      {name:"권은정",team:"노무관리팀",date:'11/23',title:"[사실] 11-23 15:50 진흥테크 세션: \"1. 선지급금으로 처리해…",body:"[사실] 11-23 15:50 진흥테크 세션: \"1. 선지급금으로 처리해주고 2. 박○○ 근로계약서 다시 받았잖아. 그걸로 반영해 3. 서○○도 11.09부터 본사 이동이라니까 연봉 다시 반영하고 중도에 이동한거니까 일할계산해 4. 박○○ 배우자 출산휴가 기존에 어떻게 처리했는지 확인하고 상한액 이상 금액 반영해 5. 수습 끝난 애들 일할계산해서 반영 …\"…",tool:'Claude',score:9},
-      {name:"곽대영",team:"기업지원팀",date:'11/23',title:"지원금 검토 스킬 기획 세션: 어드민 데이터 뷰어를 브라우저로 직접 읽어…",body:"지원금 검토 스킬 기획 세션: 어드민 데이터 뷰어를 브라우저로 직접 읽어 나성의료재단 3분기 고령자 명단을 고용24 파일 없이 재계산하고 수동 결과와 이름까지 일치함을 확인. 동시에 Notion 수기값(기준인원 7.7)과 어드민 값(7.8)의 불일치를 찾아냈고, 이를 근거로 '어드민 → Notion → Gmail·폴더' 수집 순서를 파이프라인 전 모듈에 적…",tool:'Claude',score:8},
-      {name:"박희랑",team:"노무관리팀",date:'11/23',title:"[의견] 가장 활용도가 높았던 사례는 ③비앤비코포레이션 건.",body:"[의견] 가장 활용도가 높았던 사례는 ③비앤비코포레이션 건. [사실] 본인이 수작업으로 만든 11월 급여대장 작업본 경로를 AI에게 알려주며 그걸 참고해 다시 작업하도록 지시(16:29) → AI가 1분53초 만에 초안을 만들고 본인 작업본과 전수 대조해 지급 46,332,230/공제 6,650,000/차인 39,682,230 등 모든 수치가 일치함(오류 …",tool:'Claude',score:8},
-      {name:"김동우",team:"기업지원팀",date:'11/23',title:"[Claude Code] 고용지원금 관리페이지 설계.",body:"[Claude Code] 고용지원금 관리페이지 설계. 전달받은 HTML 하나를 끝까지 읽고 수식과 기능을 역설계해, 기존 업무관리 와이어프레임 V14에 청일도·출산육아기 탭으로 넣었다. 주민번호 대신 근로자 ID 사용, 진행상태 17종 통일 등 어드민에 맞춘 변경 5가지와 원본 수식 오류 보정을 했다. 지침 예시 15건으로 검산해 모두 맞았고, 결정 필요 …",tool:'Claude',score:8},
-      {name:"함지우",team:"기업지원팀",date:'11/23',title:"사업장DB 전체에서 메일·전화·법인등록번호 중복 기준으로 담당자 불일치를…",body:"사업장DB 전체에서 메일·전화·법인등록번호 중복 기준으로 담당자 불일치를 한 번에 뽑게 한 것. 수작업으로는 오래 걸릴 대조를 바로 확인함.",tool:'Claude',score:8},
-      {name:"김동우",team:"기업지원팀",date:'11/23',title:"[Claude Code] 임채부담금 경감 로직 Q&A(세션 b3a66e2…",body:"[Claude Code] 임채부담금 경감 로직 Q&A(세션 b3a66e21, 11:04~12:44)가 가장 활용도 높았다. 담당자가 제도 설계상 모호했던 5개 포인트(경감 경계값, 수기입력 근거, 오차 허용범위, 추계액 처리, 노출 열)를 한 번에 질문 → AI가 즉시 실무 적용 가능한 답변 초안을 문단 형태로 작성 → 담당자가 AI 초안의 핵심 오류(실무…",tool:'Claude',score:8},
-      {name:"김화영",team:"노무관리팀",date:'11/23',title:"[추측] 대화 원문 미확인이라 특정 순간을 단정할 수 없음.",body:"[추측] 대화 원문 미확인이라 특정 순간을 단정할 수 없음. 메모리 갱신 맥락상 '급여대장 ↔ 공단 고지내역을 주민번호로 대조하여 4대보험 고지와 급여공제 차이를 인별로 특정하는 검증 작업'이 화영님의 대표적·고활용 패턴으로, 금일에도 핵심 활용이었을 가능성이 높음. [한계] 실제 당일 베스트 순간은 대화 로그 확보 시 확정 필요.",tool:'Claude',score:7},
-      {name:"허혜진",team:"노무관리팀",date:'11/23',title:"[사실] 오전 중 4대보험 자격취득·상실신고 3건을 노션 취득/상실신고 …",body:"[사실] 오전 중 4대보험 자격취득·상실신고 3건을 노션 취득/상실신고 DB에 신규 기록(05:29, 05:29, 06:55)하고 (주)온빛 4대보험 기타 신고를 처리. [추측] 반복 신고 업무를 AI 보조로 신속히 정리·입력해 처리 효율을 높인 것으로 보임.",tool:'Claude',score:6},
-      {name:"이새봄",team:"HR사업본부",date:'11/23',title:"[사실] 에스앤제이랩 수정 제안서 송부(16:09 발송): 오늘 유선 협…",body:"[사실] 에스앤제이랩 수정 제안서 송부(16:09 발송): 오늘 유선 협의 내용을 반영해 추진 순서를 STEP 1(2026년 12월, 신규 기금제도 설계·정관 정비, Quick Review)과 STEP 2·3(2027년 1월 이후, 복지 진단·기금 이관 설계)으로 재구성하고 견적을 조정함. [사실] 기금회의 페이지에 신규 복지제도 후보 5개를 현행 복지의 …",tool:'Claude',score:6},
-      {name:"정보람",team:"기업지원팀",date:'11/23',title:"[추측·업무일지 기반] 유디중앙역치과의원 지원금 신청 건: 신청 서류·대…",body:"[추측·업무일지 기반] 유디중앙역치과의원 지원금 신청 건: 신청 서류·대상자 요건 정리를 Claude에 지시 → 신청 자료 체크/정리 결과물 확보 개연성. 코워크 세션으로 확인된 사실은 아님(세션 조회 불가).",tool:'Claude',score:5},
-      {name:"김우석",team:"기업지원팀",date:'11/23',title:"[사실] 나사렛종합병원 2023년 장애인고용부담금 재산정: 3월 상시근로…",body:"[사실] 나사렛종합병원 2023년 장애인고용부담금 재산정: 3월 상시근로자 399→373명, 의무고용 12→11명으로 보정해 부담금 8,449,000원→7,242,000원(환급예상 1,207,000원, 3% 일시납 공제 반영 실납부 기준 1,170,790원), 2024·2025년분은 변동 없음으로 정리하고 월별 대조표 PDF를 첨부. [추측] 엑셀 3종 입…",tool:'Claude',score:5}
+      {name:'권은정',team:'노무관리팀',date:'11/24',title:'[사실] 11-23 17:21 "박○○ 만약에 보육수당 통상임금에서 빼면 배우자 출산휴가 차액분 얼마인지 봐…',body:'[사실] 대화 세션 4건(11-23 17:01~11-24 10:05 진흥테크, 10:11~14:27 급여도구 설치, 10:49~13:38 써니사이드업, 15:38 팝업 문의). [사실] 사용자 직접 발화 44턴(원기록 49건 중 스킬 본문 자동로딩·작업 완료 알림·이미지 첨부 기록 5건 제외). [사실] 도구: PowerShell 100·Bash 33·Edit 25·Read 18·Write 17·Grep 11·Skill 1(sunnyside-merged-ledger)·법령조회 1. [사실] 지시 방식: @파일 경로로 대상 특정, 업…',tool:'Claude',score:8.8},
+      {name:'곽대영',team:'기업지원팀',date:'11/24',title:'4대보험 환급 정산 자동화 툴 v9 개선. 경기상운 사례에서 드러난 임채부담금 당해연도 경감 누락(수임료 기…',body:'(집계: 직전 일지 11-23 09:30 ~ 11-24 09:20, 예약 실행 세션 제외 / 직접 대화 3건) 1. 4대보험 환급 정산 자동화 툴(계산기 v9·notice.py) 개선: ①임채 건 당해연도 경감 미확인 시 세부내역 생성 잠금(«경감 없음 확인» 체크) ②근로자산정상세내역 보험료합계↔공단 산재 과납액 ○/✕ 대조, 보수변경자(R7)·일용(R8) 후보 표시 ③파일 종류를 1행 제목으로 판별 ④조사부과통지서 적용제외형/요율변경형 구분. 황금요양병원 확정본과 셀 단위 일치, 회귀 5건 v8=v9 확인 2. 보안 검토: Cl…',tool:'Claude',score:8},
+      {name:'김동우',team:'기업지원팀',date:'11/24',title:'[Claude Code] 개발팀 배포 장애 대응. "개발팀 배포 막혔어"라는 짧은 한 문장 질의에 AI가 봇…',body:'[Claude Code] 개발팀 봇 배포 장애 대응: "개발팀 배포 막혔어" 한 마디에서 bot_status·recent_errors 도구와 git 로그를 교차 확인해 main에 미커밋된 server.py 등 9개 파일이 배포 가드(engine/devteam.py:476)를 막고 있음을 특정. "커밋 후 배포" 지시로 테스트 1,927건 전수 실행 → 누락된 청일도 서식 모듈(youth_forms.py 등, 테스트 4건)을 찾아 보완 커밋(c61e0ce) → 백그라운드로 자동배포를 감시해 #269 병합(26b3647)과 봇 재시작(…',tool:'Claude',score:8},
+      {name:'김동우',team:'기업지원팀',date:'11/24',title:'[Claude Code] 크레너헬스컴 임채 요율 오차 분석. 노션·어드민·에이전트 3곳의 수식을 각각 역산하…',body:'[Claude Code] 크레너헬스컴 임채 경감요율 오차 분석: 노션·어드민·에이전트 수식을 나눠 역산하고, NAS 확인서와 신청서 값을 대조했다. 2023은 상한 적용 순서, 2025는 신청서 추계액 기재 오류로 설명됐고 2024는 지급대상 근로자 수 26명 대신 25명으로 본 가능성을 추정했다. 어드민에서 바꿀 두 칸(최종안분보장비율, 지급보장비율)도 정리했다. [Claude Code] 설문지 스캔 PNG에서 퇴직금 지급방법, 등기임원, 동거친족 등 손글씨·체크 항목을 판독했다. [Claude Code] AI 생산성 연구 폴더에…',tool:'Claude',score:8},
+      {name:'박혜빈',team:'노무관리팀',date:'11/24',title:'[사실] DAP종합건설 산출내역서 수식 정비: 12명 중 일부만 다른 형태(고정범위 참조, \'*2\')로 남아…',body:'[사실] 오늘(11/24 KST) Claude Code 세션 2건(부모 1·자식 1) 확인. ① DAP종합건설 11월 접수내역 붙여넣기(~11:35): 산출내역서 환급금이자 수식 12명분 통일 — L8·L9 요양 환급금이자 참조열 Z→AH(XLOOKUP, 미발견 시 0), G18~G20 건강 환급금이자 \'*2\' 제거, 재계산 후 대사 4개(I26·N26·O26·P26) 모두 TRUE 확인, 수정 전 파일 백업. ② 같은 세션에서 \'쁨춘천 10월 강현정 출산휴가급여 계산\'을 별도 세션으로 위임: 출산전후휴가 2026-10-20~202…',tool:'Claude',score:8},
+      {name:'박희랑',team:'노무관리팀',date:'11/24',title:'[의견] 가장 활용도가 높았던 사례는 ①양정분산부인과 건의 9개 오류 분석·재발방지 프로세스 수립 과정. […',body:'①양정분산부인과(사업장) · 11월 급여대장 발송용 파일 보완(전일 이어짐, 17:06~18:05) — [사실] 박희랑이 발송용 파일(발송본·실수령 합산본) 생성과 세부 서식(인건비보고서 LOAD 목록 삭제, 급여변동 피벗 유지, TRUE/FALSE 검사칸 삭제 범위 등)을 여러 차례 구체적으로 지시(17:06~17:32, 총 7회). [사실] AI가 각 지시를 즉시 반영하고, 통합문서보호 암호(3355, 비앤비·바르다임 제외) 적용 규칙과 "발송용 파일 생성 시 TRUE/FALSE 검사칸 삭제" 작업 규칙을 확정함(17:26~17…',tool:'Claude',score:8},
+      {name:'함지우',team:'기업지원팀',date:'11/24',title:'[사실] 충북도립노인전문병원 임채 요율 오차: 원인 확인에서 멈추지 않고 수식 변경안까지 받은 뒤, 바꿨을…',body:'[사실] 대화 11건. ① 임채 요율 오차: 노션 수식·근복 처리 결과 대조, 원 단위 절사 문제인지 원인 확인 → 수식 변경안 → 변경 시 다른 사업장 영향을 2023년만이 아니라 모든 연도로 확장해 점검 요청. ② 정원산업(주) 2023~2025년 임채 자료요청 메일 초안 작성. ③ 본·지사 고용현황 엑셀 2건으로 연도별 퇴직금 지급대상자 수를 코드 집계(전입전출 이력자는 퇴사 아닌 연속근로로 반영). ④ 매일 예약 2건(접수완료 처리확인·적용제외 계약서 수신 후 14일 경과 점검) 자동 실행. ⑤ 4대보험 메일 작성 시 어드민…',tool:'Claude',score:8},
+      {name:'허혜진',team:'노무관리팀',date:'11/24',title:'[사실] 스킨엑스 11월 급여대장 원본→수정본, 서현개발 11월 급여대장+입사자 추가 반영 등 동일 사업장…',body:'[사실] 확인된 산출물: 다수 사업장 월 급여대장(작성·수정본·입사자 반영)·퇴직금산정내역서·퇴사자 원천징수영수증·정액급식비 파일·지원금 검토 시트. [추측] 급여파트 표준 AI 워크플로(전월 대장→당월 연봉테이블 역산 일치, 지급합계 기반 검산, 퇴직금·건강보험 퇴직정산 산출, 취득·상실·일용직 신고자료 작성)에 비추어 상당수 산출물이 AI 보조로 작성·검증되었을 가능성이 높음. [불확실] 각 건의 실제 AI 사용 여부는 대화 전사 미열람으로 단정 불가.',tool:'Claude',score:8},
+      {name:'김우석',team:'기업지원팀',date:'11/24',title:'[사실] 요청: \'30인 이상, 대체인력 지원기간 2025-08-19~2026-09-17, 16,439,89…',body:'[사실] 클로드 코드: 세션 1개·사용자 질문 1건(13:36), 도구 사용 Bash 11·법령MCP 8(조문 3·행정규칙 검색 3·상세 1·법령검색 1)·Grep 1. 대체인력지원금 두 금액의 차이(23,770원)를 역산하고 고용보험법 시행령 §29④·고시·2025 모성보호 업무편람 예시로 어느 방식이 맞는지 검토. [사실] Cowork(산출물 흔적 기반): 김우석 서명 보낸메일 2건(춘혜의료재단, 정형 서류요청), 임시보관 1건(나사렛종합병원), 김우석 통화기록·메모리 갱신·Artifact 갱신 0건. [추측] 메일 2건과 임시…',tool:'Claude',score:7}
     ],
-  bestCaseRangeLabel: '11/23',
+  bestCaseRangeLabel: '11/24',
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:45, weekEntries:8, daily:[
-      {dateStr:'2026-11-23', used:5, entries:8, rate:45, isFuture:false},
-      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:true},
+    {team:'기업지원팀', total:11, avgRate:55, weekEntries:16, daily:[
+      {dateStr:'2026-11-23', used:7, entries:9, rate:64, isFuture:false},
+      {dateStr:'2026-11-24', used:5, entries:7, rate:45, isFuture:false},
       {dateStr:'2026-11-25', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:40, weekEntries:8, daily:[
+    {team:'노무관리팀', total:10, avgRate:40, weekEntries:16, daily:[
       {dateStr:'2026-11-23', used:4, entries:8, rate:40, isFuture:false},
-      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-24', used:4, entries:8, rate:40, isFuture:false},
       {dateStr:'2026-11-25', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'HR사업본부', total:8, avgRate:13, weekEntries:4, daily:[
+    {team:'HR사업본부', total:8, avgRate:7, weekEntries:7, daily:[
       {dateStr:'2026-11-23', used:1, entries:4, rate:13, isFuture:false},
-      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-24', used:0, entries:3, rate:0, isFuture:false},
       {dateStr:'2026-11-25', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'경영지원팀', total:3, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-11-23', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-25', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'대외협력팀', total:3, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-11-23', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-25', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
     ]},
     {team:'기금팀', total:1, avgRate:0, weekEntries:0, daily:[
       {dateStr:'2026-11-23', used:0, entries:0, rate:0, isFuture:false},
-      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:true},
+      {dateStr:'2026-11-24', used:0, entries:0, rate:0, isFuture:false},
       {dateStr:'2026-11-25', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
