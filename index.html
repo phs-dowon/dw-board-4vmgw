@@ -852,11 +852,11 @@ body{background:var(--bg);color:var(--text-primary);font-family:'Pretendard Vari
 <section class="card contract-card live-row" id="cardDual" aria-label="계약 체결 및 입금 완료 실시간 피드" style="grid-row:3;grid-column:1/3;">
   <div class="dual-feed">
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">5</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 6건 · 8월 11건 · 9월 8건 · 10월 4건 · 11월 5건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--toss)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">✍️</span> 계약 체결 라이브</div><div class="col-cnt" id="ctTotal">7</div><div class="col-u">건</div></div><div class="col-monthly" data-card="contract"><span class="col-monthly-data">1월 3건 · 2월 13건 · 3월 3건 · 4월 11건 · 5월 4건 · 6월 12건 · 7월 6건 · 8월 11건 · 9월 8건 · 10월 4건 · 11월 7건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="contractFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
     <div class="dual-col">
-      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">279</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 559건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 422건 · 11월 279건</span><span class="col-monthly-tail">2026년</span></div>
+      <div class="col-hdr"><div class="col-dot" style="background:var(--cyan)"></div><div class="col-title"><span class="period-tag live">LIVE</span><span class="period-tag live" style="margin-left:4px;font-size:10px;opacity:.85">이번 달</span><span class="col-ico" aria-hidden="true">💰</span> 입금 완료 라이브</div><div class="col-cnt" id="pmTotal">280</div><div class="col-u">건</div></div><div class="col-monthly" data-card="payment"><span class="col-monthly-data">1월 370건 · 2월 377건 · 3월 459건 · 4월 559건 · 5월 423건 · 6월 447건 · 7월 438건 · 8월 424건 · 9월 420건 · 10월 422건 · 11월 280건</span><span class="col-monthly-tail">2026년</span></div>
       <div class="col-inner" id="paymentFeed" aria-live="polite" aria-atomic="false" aria-relevant="additions"></div>
     </div>
   </div>
@@ -1060,11 +1060,11 @@ setTimeout(() => { updateDonut(); }, 600);
 
 /* ── FEEDS ── */
 const cHist=[
+  {team:"HR",co:"주식회사 시*젠*루",cat:"신규",time:"11/25"},
+  {team:"미지정",co:"솥*집*동*",cat:"신규",time:"11/25"},
   {team:"급여",co:"주식회사 봉*컴*니",cat:"신규",time:"11/17"},
   {team:"기금",co:"에*앤*이* 주*회*",cat:"신규",time:"11/16"},
-  {team:"HR",co:"주식회사 아*토",cat:"신규",time:"11/5"},
-  {team:"건설",co:"제*스* 디*인",cat:"신규",time:"11/3"},
-  {team:"급여",co:"송*드*재*병*",cat:"신규",time:"11/2"}
+  {team:"HR",co:"주식회사 아*토",cat:"신규",time:"11/5"}
 ];
 const cMsgs=['고생하셨습니다!','축하합니다!','멋져요!','수고했어요!','잘했습니다!'];
 function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
@@ -1073,11 +1073,11 @@ function cItem(d,i,isNew){const e=document.createElement('div');e.className='fi'
 cHist.forEach((d,i)=>$('contractFeed').appendChild(cItem(d,i)));
 
 const pHist = [
+  {co:'치*한*병*',amt:440000,time:'11/24'},
   {co:'주식회사 비*지',amt:462000,time:'11/23'},
   {co:'시*마*설(주)',amt:330000,time:'11/23'},
   {co:'주식회사 이*건*',amt:330000,time:'11/23'},
-  {co:'주*회*아*튼',amt:330000,time:'11/23'},
-  {co:'(주)블*비*랩',amt:275000,time:'11/23'}
+  {co:'주*회*아*튼',amt:330000,time:'11/23'}
 ];
 function pItem(d,i,isNew){const e=document.createElement('div');e.className='fi';
   e.innerHTML=`<div class="fi-status" style="background:var(--cyan)"></div><div class="fi-info"><div class="fi-team">${d.co}</div><div class="fi-meta">입금 완료 · ${d.time||'방금'}</div></div>${isNew?'<span class="fi-new">NEW</span>':''}<div class="fi-amt">${fmt(d.amt)}</div>`;
@@ -1108,6 +1108,7 @@ let AI_MVP_DATA = {
   /* [v8 인사팀] 베스트 사례 — 전일 작성 일지 중 점수 높은 순으로 회전 */
   bestCases: [
       {name:'김동우',team:'기업지원팀',date:'11/25',title:'[Claude Code] 메일 서명 중복 해결. \'많은 사람들이 서명이 2개씩 겹쳐 나온다\'는 요청에 AI가…',body:'[Claude Code] 리드타임 분석: 2025.1~3.26과 이후 기간의 업무 단계별 소요시간·중앙값·이탈·지연 사유를 정리. 쉬운 설명판은 하위 에이전트로 이해도 시험, 매출 분석 자료를 연계해 접수 감소 요인과 병목을 보강, 분석 정리용 HTML 요청까지 반복 수정. [Claude Code] 담당자별 관리점검 보고서: PDF·docx·xlsx 생성, 검증 항목 통과(열람 제한 자료라 내용은 미기재). [Claude Code] 메일 서명 중복: 원인 점검 → 2차 수정(cf00de1, f779a03) → 테스트·안전 재시작·사…',tool:'Claude',score:9},
+      {name:'권은정',team:'노무관리팀',date:'11/25',title:'[사실] 11/25 13:26 "그럼 최종 검수해줘. 업체 파일이랑 검증…',body:'[사실] 대화 세션 3건(043e7fef: 11/24 17:24~11/25 14:24, 8a4846be·e1ade09a: 11/25 09:01 예약작업 자동 시작 후 e1ade09a에서 10:21~14:05 직접 대화). [사실] 사용자 발화 46턴(예약작업 지시문 2건·이어쓰기 요약 1건 포함, 직접 입력 43턴). [사실] 도구: PowerShell 1…',tool:'Claude',score:8.2},
       {name:'김동우',team:'기업지원팀',date:'11/25',title:'[Claude Code] 청일도 참여신청 기한경과 42개 거래처 재분류 건. "42개 거래처를 사업장 단위로…',body:'[Claude Code] NAS 점검 리포트 Slack 배포: 새벽 자동 점검 스크립트(nas_audit.py)가 만든 미발송 리포트 1건+스레드 답글 3건을 \'한 글자도 수정하지 말고 그대로\' 전송하라는 지시에 따라 Slack 채널(C0BJSG3H49F)에 원문 그대로 전송하고 메시지 링크만 반환(세션 4개, 각 1~2턴의 단순 반복 처리). [Claude Code] NAS 폴더 규칙 문서화: nas_audit.py·config.json에 박혀 있던 실제 점검 기준(사업장DB 폴더 구조, 00.기초자료~Z9.기타 분류 등)을 팀…',tool:'Claude',score:8},
       {name:'박혜빈',team:'노무관리팀',date:'11/25',title:'[사실] 명세서 메일 발송 오류 캡처 한 장만 주고 \'고쳐줘\'라고 맡긴 사례. AI가 애드인 코드를 뜯어 오…',body:'[사실] 오늘 세션 2건(자동 일지 세션 제외). ① \'명세서 발송 오류\' 세션: 명세서 발송 오류 캡처를 주고 원인 분석·수정을 맡김 → AI가 애드인 VBA를 추출해 오류 지점(QueueSend 암호화 단계)을 찾고, 이벤트 로그·V3 점검 후 PC에 구버전이 설치된 것을 확인해 공유폴더 최신판으로 교체. 같은 세션에서 과태료 차감을 공제/소급 마이너스 중 어떻게 처리할지(근기법 §43 전액지급 원칙), 가족관계증명서로 피부양자 신고 가능 여부, 유채희 주민번호 검증 오류 원인(2020.10. 이후 부여번호 체계), 피부양자 취…',tool:'Claude',score:8},
       {name:'함지우',team:'기업지원팀',date:'11/25',title:'동성테크는 2022년 성립이라 2023년 경감이 가능한지, 더블유티씨서울은 전입전출 이력이 없는 관리번호를…',body:'요청 15건(예약 자동 실행 2건 포함). 예약 점검 / 임채 자료요청 이력 조회 / 임채 자료요청 메일 초안(지사가 있으면 관리번호별 퇴직연금 가입자 여부 확인 문구를 함께 담도록 작업 기준 전달) / 산재 취득현황 첨부로 퇴직금 지급대상자 수·본지사 전입전출 확인 / 성립연도에 따른 경감 대상 연도·관리번호 제외 여부 검토 / 임채 경감액 충당처 확인 / 어드민 최종업데이트 지연 사업장 확인',tool:'Claude',score:8},
@@ -1121,17 +1122,17 @@ let AI_MVP_DATA = {
   /* [v8 인사팀] 팀별 활용 분포 — 이번 달 누적 일지 건수 (내림차순)
      주: 급여파트는 노무관리팀에 합산 (TEAM_ALIAS) */
   weeklyGrid: [
-    {team:'기업지원팀', total:11, avgRate:55, weekEntries:24, daily:[
+    {team:'기업지원팀', total:11, avgRate:52, weekEntries:24, daily:[
       {dateStr:'2026-11-23', used:7, entries:9, rate:64, isFuture:false},
       {dateStr:'2026-11-24', used:6, entries:8, rate:55, isFuture:false},
-      {dateStr:'2026-11-25', used:5, entries:7, rate:45, isFuture:false},
+      {dateStr:'2026-11-25', used:4, entries:7, rate:36, isFuture:false},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
     ]},
-    {team:'노무관리팀', total:10, avgRate:40, weekEntries:23, daily:[
+    {team:'노무관리팀', total:10, avgRate:43, weekEntries:24, daily:[
       {dateStr:'2026-11-23', used:4, entries:8, rate:40, isFuture:false},
       {dateStr:'2026-11-24', used:4, entries:8, rate:40, isFuture:false},
-      {dateStr:'2026-11-25', used:4, entries:7, rate:40, isFuture:false},
+      {dateStr:'2026-11-25', used:5, entries:8, rate:50, isFuture:false},
       {dateStr:'2026-11-26', used:0, entries:0, rate:0, isFuture:true},
       {dateStr:'2026-11-27', used:0, entries:0, rate:0, isFuture:true}
     ]},
@@ -3023,7 +3024,7 @@ const newC=[{team:'자문팀',cat:'노동사건'},{team:'건설팀',cat:'건설�
 const newP=[{co:'(주)강동엔지니어링',amt:3300000},{co:'에스원월드',amt:1100000},
   {co:'머니무브(주)',amt:2200000},{co:'정형외과의원',amt:220000},
   {co:'마틸다네일샵',amt:2200000},{co:'거산테크',amt:550000}];
-let ci=0,pi=0,ctT=5,pmT=279,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
+let ci=0,pi=0,ctT=7,pmT=280,leadN=14,srcN=8,srcG=4,srcB=2,cnTotal=14,cnToday=5;
 function now(){return new Date().toTimeString().slice(0,5);}
 
 function pushContract(){const d=newC[ci%newC.length];ci++;d.time=now();const prev=ctT;ctT++;
